@@ -1,0 +1,14 @@
+.video-content {
+    height: 100vh;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    background-image: url(https://www.pepejeans.com/on/demandware.static/-/Library-Sites-pjg-content-global/default/dw815b29f5/images/editorials/1905-highsummer/video_bg.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.js-video .video-content img{
+	display:none;
+}

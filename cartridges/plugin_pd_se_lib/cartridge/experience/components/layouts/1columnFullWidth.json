@@ -1,0 +1,12 @@
+{
+  "name": "1 Row Full Width",
+  "group": "layouts",
+  "attribute_definition_groups": [],
+  "region_definitions": [
+      {
+        "id":"column1FullWidth",
+        "name":"Column 1 Full Width",
+        "max_components":1
+      }
+  ]
+}

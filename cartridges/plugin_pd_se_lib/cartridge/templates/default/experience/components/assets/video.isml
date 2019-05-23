@@ -1,0 +1,16 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/video.css');
+</isscript>
+
+<div>
+	<video width="100%" height="100%" muted loop ${pdict.autoplay}>
+	  <source src="${pdict.url}" type="video/mp4">
+	</video>
+</div>
+
+<!-- 
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src="${pdict.url}"></iframe>
+</div>
+ -->

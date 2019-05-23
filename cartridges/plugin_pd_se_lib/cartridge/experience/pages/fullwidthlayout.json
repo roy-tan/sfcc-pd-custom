@@ -1,0 +1,10 @@
+{
+  "name":"Full Width Layout",
+  "description":"Use layout components to create a full width page layout",
+  "region_definitions":[
+    {
+      "id":"main",
+      "name":"Main Region"
+    }
+  ]
+}

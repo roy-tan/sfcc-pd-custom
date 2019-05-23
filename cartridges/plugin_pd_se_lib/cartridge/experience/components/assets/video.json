@@ -1,0 +1,27 @@
+{
+  "name": "Video",
+  "description": "Vimeo Video player given Video ID",
+  "group": "assets",
+  "attribute_definition_groups": [
+    {
+      "id": "videoSettings",
+      "name": "Video",
+      "description": "Video Settings",
+      "attribute_definitions": [
+        {
+          "id": "video_url",
+          "name": "URL",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "video_autoplay",
+          "name": "Autoplay",
+          "type": "boolean",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
