@@ -1,7 +1,7 @@
 {
   "name": "Video",
   "description": "Vimeo Video player given Video ID",
-  "group": "assets",
+  "group": "se_custom_assets",
   "attribute_definition_groups": [
     {
       "id": "videoSettings",

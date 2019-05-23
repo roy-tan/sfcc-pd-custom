@@ -1,0 +1,46 @@
+<div>
+	<style>
+		@media (min-width: 768px) {
+			.first-wrap {
+				height: 100%;
+				width: 100vw;
+				background-size: cover;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+				${'#'}${pdict.id}-first-wrap {
+					background-image: url('${pdict.image.src.desktop}');
+			}
+		}
+			
+		@media (min-width: 320px) and (max-width: 768px) {
+			.first-wrap {
+				height: 100%;
+				width: 100vw;
+				background-size: cover;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-attachment: local;
+				}			
+				${'#'}${pdict.id}-first-wrap {
+					background-image: url('${pdict.image.src.mobile}');
+					--focal-point-x:${pdict.image.focalPointX};
+					--focal-point-y:${pdict.image.focalPointY};
+				}
+			}
+	</style>
+	
+	<div class="first-wrap" id="${pdict.id}-first-wrap">
+		<div class="first-div">
+			<div class="first-inner-div">
+				<p id="first-title">
+					<isprint value="${pdict.text_headline}" encoding="off"/>
+				</p>
+				<a href="#anchor">
+					<span class="glyphicon glyphicon-circle-arrow-down down-arrow"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

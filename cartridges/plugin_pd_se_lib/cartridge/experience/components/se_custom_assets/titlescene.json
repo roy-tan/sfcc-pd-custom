@@ -1,0 +1,34 @@
+{
+  "name": "Title Scene",
+  "description": "Image, text overlay that links user to a category using the markup editor",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "background",
+      "name": "Background",
+      "description": "The visual display of the banner image in the background.",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "textoverlay",
+      "name": "Text Overlay",
+      "description": "The overlay text on top of the banner image.",
+      "attribute_definitions": [
+        {
+          "id": "text_headline",
+          "name": "Heading",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

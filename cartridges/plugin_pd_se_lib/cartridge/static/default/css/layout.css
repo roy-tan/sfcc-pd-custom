@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Salesforce Sans", sans-serif;
+  line-height: normal;
+}
+
+p {
+  margin: 0;
+}
+
+.page-container {
+  max-width: 1200px;
+}
+
+.region {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.region:before {
+  display: block;
+  content: "";
+  width: 100%;
+}
+
+.region .experience-component {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /*replicating the gutters*/
+  left: 0.5rem;
+  right: 0.5rem;
+}
+
+/* padding-top in percentages refers to parent width
+   this allows us to specify an aspect-ratio         */
+.region_landscape-large:before {
+  padding-top: calc(400 / 1024 * 100%);
+}
+
+.region_square:before {
+  padding-top: calc(1 / 1 * 100%);
+}
+
+.region_landscape-small:before {
+  padding-top: calc(1 / 2 * 100%);
+}
+
+.region_portrait-small:before {
+  padding-top: calc(2 / 1 * 100%);
+}
+
+div.sf-interactions-proxyHoverContainer a {
+  overflow: visible;
+}

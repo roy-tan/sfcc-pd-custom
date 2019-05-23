@@ -1,0 +1,20 @@
+{
+  "name": "Story",
+  "group": "se_custom_layouts",
+  "attribute_definition_groups": [],
+  "region_definitions": [
+    {
+      "id":"scenes",
+      "name":"Scenes",
+      "component_type_exclusions": [
+        { "type_id": "layouts.1column" },
+        { "type_id": "layouts.2column" },
+        { "type_id": "layouts.3column" },
+        { "type_id": "layouts.4column" },
+        { "type_id": "layouts.gridcomponentlayout" },
+        { "type_id": "layouts.carousel" },
+        { "type_id": "layouts.story" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<div>
+	<style>
+		@media (min-width: 768px) {
+			.second-wrap {
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+				${'#'}${pdict.id}-second-wrap {
+					background-image: url('${pdict.image.src.desktop}');
+			}
+		}
+			
+		@media (min-width: 320px) and (max-width: 768px) {
+			.second-wrap {
+				background-repeat: no-repeat;
+				background-attachment: local;
+				}			
+				${'#'}${pdict.id}-second-wrap {
+					background-image: url('${pdict.image.src.mobile}');
+					--focal-point-x:${pdict.image.focalPointX};
+					--focal-point-y:${pdict.image.focalPointY};
+				}
+			}
+	</style>
+
+	<div class="second-wrap" id="${pdict.id}-second-wrap">
+		<div class="second-div" id="anchor">
+			<p class="body-text" id="second-title">
+				<span class="line-separator"></span>
+				<isprint value="${pdict.text_headline}" encoding="off"/>
+				<span class="line-separator"></span>
+			</p>
+		</div>
+		<div class="third-div">
+		</div>
+	</div>
+</div>

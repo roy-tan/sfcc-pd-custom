@@ -1,0 +1,55 @@
+{
+  "name": "End Scene",
+  "description": "Image, text overlay that links user to a category using the markup editor",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "button_spec",
+      "name": "Button Specification",
+      "description": "Specify the link for the 'Show Now' button.",
+      "attribute_definitions": [
+        {
+          "id": "shop_now_target",
+          "name": "Link",
+          "description": "Specification for the link to where the user will be directed.",
+          "type": "url",
+          "required": true
+        },
+        {
+          "id": "button_name",
+          "name": "Button Name",
+	        "description": "The text to be displayed on Botton. If nothing is entered 'Shop Now' will be displayed.",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },    
+    {
+      "id": "background",
+      "name": "Background",
+      "description": "The visual display of the banner image in the background.",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "textoverlay",
+      "name": "Text Overlay",
+      "description": "The overlay text on top of the banner image.",
+      "attribute_definitions": [
+        {
+          "id": "text_headline",
+          "name": "Heading",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
