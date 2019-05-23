@@ -54,5 +54,5 @@ module.exports.render = function (context) {
     model.button_name = content.button_name;
     model.url = content.shop_now_target;
 
-    return new Template('experience/components/story/endscene').render(model).text;
+    return new Template('experience/components/se_custom_assets/endscene').render(model).text;
 };

@@ -1,0 +1,8 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/story.css');
+    assets.addJs('/js/story.js');
+</isscript>
+<div>
+	<isprint value="${pdict.regions.scenes.render()}" encoding="off"/>
+</div>

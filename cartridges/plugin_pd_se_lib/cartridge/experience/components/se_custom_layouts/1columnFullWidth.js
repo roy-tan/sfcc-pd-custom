@@ -14,5 +14,5 @@ module.exports.render = function (context) {
     // automatically register configured regions
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 
-    return new Template('experience/components/layouts/1columnFullWidth').render(model).text;
+    return new Template('experience/components/se_custom_layouts/1columnFullWidth').render(model).text;
 };

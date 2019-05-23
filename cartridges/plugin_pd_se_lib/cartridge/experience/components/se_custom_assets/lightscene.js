@@ -39,5 +39,5 @@ module.exports.render = function (context) {
         };
     }
 
-    return new Template('experience/components/story/lightscene').render(model).text;
+    return new Template('experience/components/se_custom_assets/lightscene').render(model).text;
 };

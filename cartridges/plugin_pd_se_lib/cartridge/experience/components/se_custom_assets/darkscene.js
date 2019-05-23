@@ -39,5 +39,5 @@ module.exports.render = function (context) {
         };
     }
 
-    return new Template('experience/components/story/darkscene').render(model).text;
+    return new Template('experience/components/se_custom_assets/darkscene').render(model).text;
 };

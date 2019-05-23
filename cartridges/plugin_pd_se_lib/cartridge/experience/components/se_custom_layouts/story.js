@@ -16,5 +16,5 @@ module.exports.render = function (context) {
     
     model.id = 'story-' + context.component.getID();
 
-    return new Template('experience/components/story/story').render(model).text;
+    return new Template('experience/components/se_custom_layouts/story').render(model).text;
 };

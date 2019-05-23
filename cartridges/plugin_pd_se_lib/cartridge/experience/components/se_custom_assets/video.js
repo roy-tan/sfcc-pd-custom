@@ -20,5 +20,5 @@ module.exports.render = function (context) {
     	model.autoplay = "autoplay";
     
 
-    return new Template('experience/components/assets/video').render(model).text;
+    return new Template('experience/components/se_custom_assets/video').render(model).text;
 };
