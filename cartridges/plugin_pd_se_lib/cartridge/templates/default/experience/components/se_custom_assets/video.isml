@@ -3,14 +3,23 @@
     assets.addCss('/css/video.css');
 </isscript>
 
-<div>
+<div class="js-video video-content">
 	<video width="100%" height="100%" muted loop ${pdict.autoplay}>
-	  <source src="${pdict.url}" type="video/mp4">
+	  <source src="${pdict.videoUrl}" type="video/mp4">
 	</video>
+	
+	<div class="hover-image">
+		<img src="https://www.pepejeans.com/on/demandware.static/-/Library-Sites-pjg-content-global/default/dw29602fd3/images/editorials/1905-highsummer/logo_highsummer.png">
+	 	<p class="pstyle">
+			<section>
+						<a href="${pdict.targetUrl}" style="text-decoration:none;">
+							<button id="js-trigger-overlay" type="button">
+								<isprint value="${pdict.buttonName}" encoding="off"/>
+							</button>
+						</a>
+					</section>			
+		</p>
+	 	
+	</div>
 </div>
 
-<!-- 
-<div class="embed-responsive embed-responsive-16by9">
-	<iframe class="embed-responsive-item" src="${pdict.url}"></iframe>
-</div>
- -->

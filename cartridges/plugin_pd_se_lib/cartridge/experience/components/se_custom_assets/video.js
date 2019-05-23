@@ -13,8 +13,9 @@ module.exports.render = function (context) {
     var content = context.content;
 
     model.id = 'video-' + context.component.getID();
-    model.url = content.video_url;
-    
+    model.videoUrl = content.video_url;
+    model.targetUrl = content.shop_now_target;
+    model.buttonName = content.button_name;
     model.autoplay = "";
     if (content.video_autoplay == true)
     	model.autoplay = "autoplay";
