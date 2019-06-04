@@ -9,7 +9,7 @@
 	</video>
 	
 	<div class="hover-image">
-		<img src="https://www.pepejeans.com/on/demandware.static/-/Library-Sites-pjg-content-global/default/dw29602fd3/images/editorials/1905-highsummer/logo_highsummer.png">
+		<isif condition="${pdict.image.src}"><img src="${pdict.image.src.desktop}"></isif>
 	 	<p class="pstyle">
 			<section>
 						<a href="${pdict.targetUrl}" style="text-decoration:none;">

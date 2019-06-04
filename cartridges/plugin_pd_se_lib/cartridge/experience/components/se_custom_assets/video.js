@@ -19,7 +19,21 @@ module.exports.render = function (context) {
     model.autoplay = "";
     if (content.video_autoplay == true)
     	model.autoplay = "autoplay";
-    
+
+    if (content.image) {
+        var mobileImageTransformation = ImageTransformation.scale(content.image.metaData, 'mobile');
+        var desktopImageTransformation = ImageTransformation.scale(content.image.metaData, 'desktop');
+
+        model.image = {
+            src: {
+                mobile  : ImageTransformation.url(content.image.file, mobileImageTransformation),
+                desktop : ImageTransformation.url(content.image.file, desktopImageTransformation)
+            },
+            alt         : content.image.file.getAlt(),
+            focalPointX : content.image.focalPoint.x * 100 + '%',
+            focalPointY : content.image.focalPoint.y * 100 + '%'
+        };
+    }
 
     return new Template('experience/components/se_custom_assets/video').render(model).text;
 };
