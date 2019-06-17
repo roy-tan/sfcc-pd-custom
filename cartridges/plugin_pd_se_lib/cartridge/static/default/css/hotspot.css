@@ -1,0 +1,60 @@
+/*
+* Hotspot
+* 
+*/
+
+.hotspot {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background: #00a1e0;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 200;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+
+/*
+* Hotspot content
+* 
+*/
+
+.hotspot>i {
+    font-size: 16px;
+    color: #fff;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+.hotspot_content a:hover{
+    text-decoration: none;
+}
+
+.hotspot>div {
+    background: #fff;
+    width: 140px;    
+    margin: 2px;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 10px;
+    display: none;
+    /* Required */
+}
+
+.hotspot>div>.hotspot_content {
+    background: rgba(255, 255, 255, 0.4);
+    margin-top: 2px;
+    padding: 4px 10px;
+    height: 72px;
+    overflow-y: auto;
+}
+
+.product-text {
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
