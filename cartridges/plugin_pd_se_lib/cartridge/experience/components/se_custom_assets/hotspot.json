@@ -1,0 +1,28 @@
+{
+  "name": "Image with Hotspot",
+  "description": "Image with Hotspot",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "background",
+      "name": "Background",
+      "description": "The visual display of the banner image in the background.",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "product",
+          "name": "Product",
+	  "description": "Select the product SKU to be displayed.",
+          "type": "product",
+          "required": true
+        } 
+      ]
+    }
+  ],
+  "region_definitions": []
+}

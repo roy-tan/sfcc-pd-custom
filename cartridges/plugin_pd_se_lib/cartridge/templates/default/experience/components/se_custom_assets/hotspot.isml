@@ -1,0 +1,26 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/component.css');
+    assets.addCss('/css/hotspot.css');
+    assets.addCss('/css/font-awesome.min.css');   
+    assets.addJs('/js/hotspot.js'); 
+</isscript>
+<figure class="component-figure">
+    <picture>
+        <source srcset="${pdict.image.src.desktop}" media="(min-width: 768px)" />
+        <img class="component-image" src="${pdict.image.src.mobile}"
+            style="--focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY}" <isif
+            condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
+
+        <div id="hotspot" class="hotspot" style="top:${pdict.image.focalPointY}; left:${pdict.image.focalPointX};">
+            <i class="fa">&#xf067;</i>            
+            <div id="hotspot_content" class="hotspot_content" style="display: none;">  
+            <a href="${pdict.productUrl}">                                      
+            <div class="product-text">${pdict.productName}</div>
+            <div class="product-text">${pdict.productPrice}</div>
+                <img class="component-image" src="${pdict.productImage.src}"/>
+            </a>
+            </div>                        
+        </div>
+    </picture>
+</figure>
