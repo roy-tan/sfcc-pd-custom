@@ -1,0 +1,34 @@
+{
+  "name": "GS Question",
+  "description": "Guided Selling Question",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "background",
+      "name": "Background",
+      "description": "The visual display of the banner image in the background.",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "gsQuestion",
+      "name": "Question",
+      "description": "Guided Selling Question",
+      "attribute_definitions": [
+        {
+          "id": "text_gsQuestion",
+          "name": "Question",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

@@ -1,0 +1,9 @@
+<div>	
+	<div>
+		<p>
+			<isprint value="${pdict.text_gsQuestion}" encoding="off"/>
+			<isprint value="${pdict.id}" encoding="off"/>
+			sdfsdfsdf
+		</p>
+	</div>
+</div>

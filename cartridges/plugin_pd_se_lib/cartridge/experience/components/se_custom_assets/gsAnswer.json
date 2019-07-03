@@ -1,0 +1,47 @@
+{
+  "name": "GS Answer",
+  "description": "Guided Selling Answer",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "gsAnswerIcon",
+      "name": "Answer Icon",
+      "description": "The visual display of the answer icon on the page.",
+      "attribute_definitions": [
+        {
+          "id": "icon_gsAnswer",
+          "name": "Image",
+          "type": "image",
+          "required": false
+        }
+      ]
+    },
+      {
+      "id": "gsAnswerText",
+      "name": "Answer Text",
+      "description": "Guided Selling Answer Text",
+      "attribute_definitions": [
+        {
+          "id": "text_gsAnswerText",
+          "name": "Answer Text",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+      {
+      "id": "gsAnswerValue",
+      "name": "Answer Value",
+      "description": "Guided Selling Answer Value",
+      "attribute_definitions": [
+        {
+          "id": "text_gsAnswerValue",
+          "name": "Answer Value",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
