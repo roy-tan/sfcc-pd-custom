@@ -1,0 +1,40 @@
+{
+  "name": "Guided Sell Question Wrapper",
+  "group": "se_custom_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "gsQuestionWrapper",
+      "name": "Search Preferences",
+      "description": "Preferences",
+      "attribute_definitions": [
+        {
+          "id": "gsSearchPrefValue",
+          "name": "Search Facet Name Preference",
+          "type": "string",
+          "required": true
+        },{
+          "id": "gsSearchPrefNo",
+          "name": "Search Preference Number",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  
+  ],
+  "region_definitions": [
+      {
+      "id":"questions",
+      "name":"Questions",
+      "component_type_exclusions": [
+        { "type_id": "layouts.1column" },
+        { "type_id": "layouts.2column" },
+        { "type_id": "layouts.3column" },
+        { "type_id": "layouts.4column" },
+        { "type_id": "layouts.gridcomponentlayout" },
+        { "type_id": "layouts.carousel" },
+        { "type_id": "layouts.story" }
+      ]
+      }
+  ]
+}

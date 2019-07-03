@@ -1,0 +1,12 @@
+{
+  "name": "Guided Selling Form",
+  "group": "se_custom_layouts",
+  "attribute_definition_groups": [],
+  "region_definitions": [
+      {
+        "id":"gsForm",
+        "name":"GS Form Full Width",
+        "max_components":10
+      }
+  ]
+}

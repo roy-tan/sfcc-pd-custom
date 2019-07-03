@@ -5,7 +5,7 @@ var HashMap = require('dw/util/HashMap');
 var PageRenderHelper = require('~/cartridge/experience/utilities/PageRenderHelper.js');
 
 /**
- * Render logic for the layouts.guidedsell.
+ * Render logic for the layouts.gsForm.
  */
 module.exports.render = function (context) {
     var model = new HashMap();
@@ -14,5 +14,5 @@ module.exports.render = function (context) {
     // automatically register configured regions
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 
-    return new Template('experience/components/se_custom_layouts/guidedsell').render(model).text;
+    return new Template('experience/components/se_custom_layouts/gsForm').render(model).text;
 };

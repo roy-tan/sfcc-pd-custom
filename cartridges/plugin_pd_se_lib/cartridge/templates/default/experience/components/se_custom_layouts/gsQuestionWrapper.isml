@@ -4,5 +4,9 @@
     assets.addCss('/css/pagedesigner-bootstrap.min.css');
 </isscript>
 <div class="row mx-n2">
-	<isprint value="${pdict.regions.questions.setClassName("col-12").render()}" encoding="off"/>
+		
+	<isprint value="${pdict.regions.gsQuestionWrapper.setClassName("col-12").render()}" encoding="off"/>
 </div>
+
+<!-- Close the Input -->
+</input>

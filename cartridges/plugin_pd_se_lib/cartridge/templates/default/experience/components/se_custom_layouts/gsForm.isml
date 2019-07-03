@@ -1,0 +1,15 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/layout.css');
+    assets.addCss('/css/pagedesigner-bootstrap.min.css');
+</isscript>
+
+<!-- Guided Sell Form -->
+<form role="search" action="/s/RefArchGlobal/search?lang=default" method="post" name="simpleSearch">
+
+<div class="row mx-n2">
+	<isprint value="${pdict.regions.gsForm.setClassName("col-12").render()}" encoding="off"/>
+</div>
+
+<!-- END Sell Form -->
+</form>
