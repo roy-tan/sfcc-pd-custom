@@ -1,0 +1,22 @@
+{
+  "name": "GS Submission",
+  "description": "Guided Selling Question",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "button_spec",
+      "name": "Button Specification",
+      "description": "Specify the link for the 'Show Now' button.",
+      "attribute_definitions": [
+        {
+          "id": "button_name",
+          "name": "Button Name",
+	        "description": "The text to be displayed on button.",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
