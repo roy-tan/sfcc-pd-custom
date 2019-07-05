@@ -3,13 +3,13 @@ $(function() {
     .click(
         function () {
             //alert('Click event is fired');
-            if ($('#hotspot_content').css("display") == "none")
+            if ($('#hotspot-content').css("display") == "none")
             {
-                $('#hotspot_content').show();
+                $('#hotspot-content').show();
             }
             else
             {
-                $('#hotspot_content').hide();
+                $('#hotspot-content').hide();
             }
         }
     )

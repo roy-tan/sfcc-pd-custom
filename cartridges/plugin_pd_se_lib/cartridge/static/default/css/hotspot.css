@@ -11,8 +11,6 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 200;
-    margin-left: -10px;
-    margin-top: -10px;
 }
 
 
@@ -28,27 +26,15 @@
     padding-top: 2px;
 }
 
-.hotspot_content a:hover{
+#hotspot-content a:hover{
     text-decoration: none;
 }
 
 .hotspot>div {
-    background: #fff;
-    width: 140px;    
-    margin: 2px;
+    background: #fff;         
     border-radius: 4px;
     overflow: hidden;
-    font-size: 10px;
     display: none;
-    /* Required */
-}
-
-.hotspot>div>.hotspot_content {
-    background: rgba(255, 255, 255, 0.4);
-    margin-top: 2px;
-    padding: 4px 10px;
-    height: 72px;
-    overflow-y: auto;
 }
 
 .product-text {
@@ -57,4 +43,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    font-size: 0.7rem;
+ }
+
+.btn-hotspot {
+    font-size: 0.7rem;    
+    border-radius : 0;
+}
+
+.smallImage {
+    width: 140px;
+    margin: 2px -55px;
+}
+
+.smallImage.top{
+    margin: -220px -55px;
+}
+
+.smallImage .btn-hotspot{
+    padding: 0.28rem 2.05rem;
+}
+
+.mediumImage {
+    width: 360px;
+    margin: 2px -155px;
+}
+
+.mediumImage.top{
+    margin: -440px -155px;
+}
+
+.mediumImage .btn-hotspot{
+    padding: 0.28rem 9.0rem;
+}
+
+.largeImage {
+    width: 540px;
+    margin: 2px -255px;
+}
+
+.largeImage.top{
+    margin: -620px -255px;
+}
+
+.largeImage .btn-hotspot{
+    padding: 0.28rem 14.5rem;
+}

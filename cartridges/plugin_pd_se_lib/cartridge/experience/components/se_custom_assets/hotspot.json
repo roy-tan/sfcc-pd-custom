@@ -15,12 +15,36 @@
           "required": true
         },
         {
+          "id": "viewType",
+          "name": "Image View Type",
+          "description": "Product Image View Type",
+          "type": "enum",
+          "values": ["small","medium","large"],
+          "default_value": "small",
+          "required": true
+        },
+        {
           "id": "product",
           "name": "Product",
-	  "description": "Select the product SKU to be displayed.",
+	        "description": "Select the product SKU to be displayed.",
           "type": "product",
           "required": true
-        } 
+        },
+        {
+          "id": "overlayAlign",
+          "name": "Hotspot Content Overlay Alignment",
+          "description": "Alignment of overlay hotspot content",
+          "type": "enum",
+          "values": ["bottom","top"],
+          "default_value": "bottom",
+          "required": true
+        },
+        {
+          "id": "addToCart",
+          "name": "Add to Cart Button",
+          "description": "Include Add to Cart button",
+          "type": "boolean"
+        }               
       ]
     }
   ],

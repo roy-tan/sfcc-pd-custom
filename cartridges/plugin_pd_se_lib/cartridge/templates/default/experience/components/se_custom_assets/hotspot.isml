@@ -2,8 +2,9 @@
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/component.css');
     assets.addCss('/css/hotspot.css');
-    assets.addCss('/css/font-awesome.min.css');   
-    assets.addJs('/js/hotspot.js'); 
+    assets.addCss('/css/font-awesome.min.css');
+    assets.addJs('/js/hotspot.js');
+    assets.addJs('/js/productDetail.js');
 </isscript>
 <figure class="component-figure">
     <picture>
@@ -13,14 +14,25 @@
             condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
 
         <div id="hotspot" class="hotspot" style="top:${pdict.image.focalPointY}; left:${pdict.image.focalPointX};">
-            <i class="fa">&#xf067;</i>            
-            <div id="hotspot_content" class="hotspot_content" style="display: none;">  
-            <a href="${pdict.productUrl}">                                      
-            <div class="product-text">${pdict.productName}</div>
-            <div class="product-text">${pdict.productPrice}</div>
-                <img class="component-image" src="${pdict.productImage.src}"/>
-            </a>
-            </div>                        
+            <i class="fa">&#xf067;</i>
+            <div id="hotspot-content" class="${pdict.viewType}Image ${pdict.overlayAlign}" style="display: none;">
+                <a href="${pdict.productUrl}">
+                    <div class="product-text">${pdict.productName}</div>
+                    <div class="product-text">${pdict.productPrice}</div>
+                    <img class="component-image" src="${pdict.productImage.src}" />
+                </a>
+                <isif condition="${pdict.addToCart}">
+                <div class="product-detail" data-pid="${pdict.productId}">
+                    <select class="quantity-select" style="display:none"><option value="1" selected>1</option></select>
+                    <input type="hidden" class="add-to-cart-url" value="/on/demandware.store/Sites-RefArch-Site/default/Cart-AddProduct">
+                    <button class="add-to-cart btn btn-primary btn-hotspot" data-pid="${pdict.productId}">
+                        <i class="fa fa-shopping-bag"></i>
+                        Add to Cart
+                    </button>
+                </div>
+                </isif>
+            </div>
         </div>
     </picture>
+
 </figure>
