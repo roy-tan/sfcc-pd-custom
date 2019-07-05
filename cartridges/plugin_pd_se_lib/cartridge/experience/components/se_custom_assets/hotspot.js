@@ -31,7 +31,11 @@ module.exports.render = function (context) {
     if (product) {
         model.productName = product.name;
         model.productUrl = URLUtils.url('Product-Show', 'pid', product.ID);
-        var images = product.getImages('small'); // make the product image type configurable by the component?
+        model.productId = product.ID;
+        model.viewType = content.viewType;
+        model.overlayAlign = content.overlayAlign;
+        model.addToCart = content.addToCart;
+        var images = product.getImages(model.viewType);
         var productImage = images.iterator().next();
         if (productImage) {
             model.productImage = {
