@@ -26,7 +26,7 @@
     padding-top: 2px;
 }
 
-#hotspot-content a:hover{
+.hotspot-content a:hover{
     text-decoration: none;
 }
 
@@ -57,11 +57,11 @@
 }
 
 .smallImage.top{
-    margin: -220px -55px;
+    margin: -255px -55px;
 }
 
 .smallImage .btn-hotspot{
-    padding: 0.28rem 2.05rem;
+    padding: 0.28rem 2.01rem;
 }
 
 .mediumImage {

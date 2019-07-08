@@ -13,9 +13,9 @@
             style="--focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY}" <isif
             condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
 
-        <div id="hotspot" class="hotspot" style="top:${pdict.image.focalPointY}; left:${pdict.image.focalPointX};">
+        <div id="hotspot" data-pid="${pdict.productId}" class="hotspot" style="top:${pdict.image.focalPointY}; left:${pdict.image.focalPointX};">
             <i class="fa">&#xf067;</i>
-            <div id="hotspot-content" class="${pdict.viewType}Image ${pdict.overlayAlign}" style="display: none;">
+            <div id="hotspot-content-${pdict.productId}" class="hotspot-content ${pdict.viewType}Image ${pdict.overlayAlign}" style="display: none;">
                 <a href="${pdict.productUrl}">
                     <div class="product-text">${pdict.productName}</div>
                     <div class="product-text">${pdict.productPrice}</div>
@@ -24,7 +24,7 @@
                 <isif condition="${pdict.addToCart}">
                 <div class="product-detail" data-pid="${pdict.productId}">
                     <select class="quantity-select" style="display:none"><option value="1" selected>1</option></select>
-                    <input type="hidden" class="add-to-cart-url" value="/on/demandware.store/Sites-RefArch-Site/default/Cart-AddProduct">
+                    <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
                     <button class="add-to-cart btn btn-primary btn-hotspot" data-pid="${pdict.productId}">
                         <i class="fa fa-shopping-bag"></i>
                         Add to Cart
