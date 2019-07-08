@@ -35,6 +35,7 @@ module.exports.render = function (context) {
         model.viewType = content.viewType;
         model.overlayAlign = content.overlayAlign;
         model.addToCart = content.addToCart;
+        model.addToCartUrl = URLUtils.url('Cart-AddProduct');
         var images = product.getImages(model.viewType);
         var productImage = images.iterator().next();
         if (productImage) {
