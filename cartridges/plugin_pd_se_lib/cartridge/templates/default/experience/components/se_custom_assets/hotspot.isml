@@ -22,7 +22,7 @@
                     <img class="component-image" src="${pdict.productImage.src}" />
                 </a>
                 <isif condition="${pdict.addToCart}">
-                <div class="product-detail" data-pid="${pdict.productId}">
+                <div id="product-detail" data-pid="${pdict.productId}">
                     <select class="quantity-select" style="display:none"><option value="1" selected>1</option></select>
                     <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
                     <button class="add-to-cart btn btn-primary btn-hotspot" data-pid="${pdict.productId}">
