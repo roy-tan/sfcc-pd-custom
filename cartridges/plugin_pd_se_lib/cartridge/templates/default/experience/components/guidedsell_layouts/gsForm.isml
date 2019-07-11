@@ -7,7 +7,7 @@
 
 <iscomment> Form Start </iscomment>
 === FORM START 
-<form action="/s/RefArchGlobal/guided%20sell-1/" method="get" name="simpleSearch">
+<form action="/s/RefArchGlobal/guided%20sell-1/" method="get" name="guidedSelling" id="guidedSell">
 
     <isprint value="${pdict.regions.gsQuestions.setClassName("col-12").render()}" encoding="off"/>
 
