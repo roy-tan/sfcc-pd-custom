@@ -1,0 +1,12 @@
+{
+  "name": "Guided Sell Form",
+  "group": "guidedsell_layouts",
+  "attribute_definition_groups": [],
+  "region_definitions": [
+      {
+        "id":"gsQuestions",
+        "name":"Questions & Answers",
+        "max_components":10
+      }
+  ]
+}

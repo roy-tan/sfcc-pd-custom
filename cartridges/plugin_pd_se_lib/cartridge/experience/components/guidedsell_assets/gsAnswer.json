@@ -1,0 +1,26 @@
+{
+  "name": "Answer",
+  "description": "Shows rich text for text pages, such as help or FAQ pages",
+  "group": "guidedsell_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "answer_content",
+      "name": "Answer Content",
+      "description": "The content to show in this component",
+      "attribute_definitions": [
+        {
+          "id": "answer_text",
+          "name": "Answer Text",
+          "type": "string",
+          "required": true
+        },{
+          "id": "answer_value",
+          "name": "Answer Value",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Questions",
+  "description": "Shows aTestionl ",
+  "group": "guidedsell_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "question_content",
+      "name": "Question Content",
+      "description": "This is content to show in this component",
+      "attribute_definitions": [
+        {
+          "id": "question_text",
+          "name": "Question Text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "question_number",
+          "name": "Question Number",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "preference_name",
+          "name": "Preference Name",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": [
+      {
+        "id":"gsAnswers",
+        "name":"Answers",
+        "max_components":3
+      }
+  ]
+}

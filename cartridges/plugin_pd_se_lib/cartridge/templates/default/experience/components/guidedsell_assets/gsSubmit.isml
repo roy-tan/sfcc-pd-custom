@@ -1,0 +1,11 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/component.css');
+    assets.addCss('/css/richtext.css');
+</isscript>
+<div class="richtext">
+
+<input type="submit" value="${pdict.submit_text}">
+
+</div>
+

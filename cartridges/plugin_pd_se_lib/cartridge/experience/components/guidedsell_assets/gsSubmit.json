@@ -1,0 +1,21 @@
+{
+  "name": "Submit",
+  "description": "Shows rich text for text pages, such as help or FAQ pages",
+  "group": "guidedsell_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "submit_content",
+      "name": "Submit Content",
+      "description": "The content to show in this component",
+      "attribute_definitions": [
+        {
+          "id": "submit_text",
+          "name": "Submit Text",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
