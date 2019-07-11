@@ -12,7 +12,7 @@
     <isprint value="${pdict.regions.gsQuestions.setClassName("col-12").render()}" encoding="off"/>
 
 <iscomment> Form End </iscomment>
-
+<input type="submit" style="display: none;">
 </form>
     
 </div>
