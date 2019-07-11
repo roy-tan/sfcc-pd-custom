@@ -1,0 +1,18 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/layout.css');
+    assets.addCss('/css/pagedesigner-bootstrap.min.css');
+</isscript>
+<div class="row mx-n2">
+
+<iscomment> Form Start </iscomment>
+=== FORM START 
+<form action="/s/RefArchGlobal/guided%20sell-1/" method="get" name="simpleSearch">
+
+    <isprint value="${pdict.regions.gsQuestions.setClassName("col-12").render()}" encoding="off"/>
+
+<iscomment> Form End </iscomment>
+
+</form>
+    
+</div>

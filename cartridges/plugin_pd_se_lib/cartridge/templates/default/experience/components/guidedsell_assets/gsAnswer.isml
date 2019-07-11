@@ -1,0 +1,11 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/component.css');
+    assets.addCss('/css/richtext.css');
+</isscript>
+<div class="richtext">
+    <iscomment> <isprint value="${pdict.answer_text}" encoding="off"/> </iscomment>
+
+    <input type="radio" name="prefv1" value="${pdict.answer_value}"> ${pdict.answer_text}
+  
+</div>
