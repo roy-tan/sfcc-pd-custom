@@ -9,22 +9,35 @@
       "description": "This is content to show in this component",
       "attribute_definitions": [
         {
+          "id": "question_banner",
+          "name": "Question Banner",
+          "type": "image",
+          "required": false
+        },
+        {
           "id": "question_text",
           "name": "Question Text",
           "type": "string",
           "required": true
         },
         {
-          "id": "question_number",
-          "name": "Question Number",
-          "type": "string",
+          "id": "preference_name",
+          "name": "Preference Name",
+          "type": "enum",
+          "values": [
+            "refinementColor",
+            "size",
+            "isNew"
+          ],
           "required": true
         },
         {
-          "id": "preference_name",
-          "name": "Preference Name",
-          "type": "string",
-          "required": true
+          "id": "question_multi",
+          "description": "Can there be multiple selections?",
+          "name": "Radiobox or Checkbox",
+          "type": "boolean",
+          "required": true,
+          "default_value": false
         }
       ]
     }
