@@ -2,7 +2,9 @@
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/layout.css');
     assets.addCss('/css/pagedesigner-bootstrap.min.css');
+    assets.addJs('/js/guidedSell.js');
 </isscript>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <div class="row mx-n2">
 
 <iscomment> Form Start </iscomment>
@@ -12,7 +14,6 @@
     <isprint value="${pdict.regions.gsQuestions.setClassName("col-12").render()}" encoding="off"/>
 
 <iscomment> Form End </iscomment>
-<input type="submit" name="gsSubmit" id="gsSubmit" style="display: none;">
 </form>
     
 </div>
