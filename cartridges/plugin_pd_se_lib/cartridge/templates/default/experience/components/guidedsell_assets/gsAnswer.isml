@@ -5,7 +5,9 @@
 </isscript>
 <div class="richtext">
     <iscomment> <isprint value="${pdict.answer_text}" encoding="off"/> </iscomment>
-
-    <input type="radio" name="prefv1" value="${pdict.answer_value}"> ${pdict.answer_text}
+    <isif condition="${pdict.answer_icon}">
+        <img class="answer-icon" src="${pdict.answer_icon.src.desktop}" />
+    </isif>
+    <input type="radio" name="prefv" value="${pdict.answer_value}"> ${pdict.answer_text}
   
 </div>
