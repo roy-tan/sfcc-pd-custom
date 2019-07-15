@@ -6,8 +6,11 @@
 <div class="row mx-n2">
 
     <isprint value="${pdict.question_text}" encoding="off"/>
+    <isif condition="${pdict.question_banner}">
+        <img class="question-banner" src="${pdict.question_banner.src.desktop}" />
+    </isif>
 
-    <input name="prefn${pdict.question_number}" value="${pdict.preference_name}" type="hidden">
+    <input name="prefn" value="${pdict.preference_name}" type="hidden">
 
 
     <isprint value="${pdict.regions.gsAnswers.setClassName("col-12").render()}" encoding="off"/>
