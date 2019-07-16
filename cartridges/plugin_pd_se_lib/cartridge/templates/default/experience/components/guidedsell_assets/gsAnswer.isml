@@ -3,11 +3,11 @@
     assets.addCss('/css/component.css');
     assets.addCss('/css/richtext.css');
 </isscript>
-<div class="richtext">
     <iscomment> <isprint value="${pdict.answer_text}" encoding="off"/> </iscomment>
-    <isif condition="${pdict.answer_icon}">
-        <img class="answer-icon" src="${pdict.answer_icon.src.desktop}" />
-    </isif>
-    <input type="radio" name="prefv" value="${pdict.answer_value}"> ${pdict.answer_text}
-  
-</div>
+    <label class="btn guidedSellMethod">
+        <div class="method ${pdict.answer_value}" style="background-image: url('${pdict.answer_icon.src.desktop}'); background-size: 142px 142px;"></div>
+        <input type="radio" name="prefv" class="radio-button" value="${pdict.answer_value}" style="position: absolute; clip: rect(0,0,0,0); pointer-events: none;"> 
+        <label class="radio-tile-label" style="position: relative; bottom:-100px">${pdict.answer_text}</label>
+    </label> 
+    
+
