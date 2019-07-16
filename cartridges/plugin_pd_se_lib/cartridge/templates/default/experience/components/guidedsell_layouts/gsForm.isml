@@ -1,7 +1,7 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/layout.css');
-    assets.addCss('/css/pagedesigner-bootstrap.min.css');
+    assets.addCss('/css/guidedSell.css');
     assets.addJs('/js/guidedSell.js');
 </isscript>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
