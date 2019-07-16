@@ -24,11 +24,16 @@ $(document).ready( function() {
 						var postUrl = "/on/demandware.store/Sites-RefArchGlobal-Site/en_GB/Search-ShowAjax?" + searchQuery;
 						$.get(postUrl)
 						.done(function( data ) {
+							var n = parseInt($(data).find('.result-count').text());
+
+							if (n > 0) {
 							var content = $( data ).find( ".tab-content.col-12" );
 							$( ".search-results .guidedSellResults" ).empty().append( content );
 							$('.refinement-bar').remove();
 							$('.search-results').show();
-
+							} else {
+								$( ".search-results .guidedSellResults" ).empty().append( "<h3>There were no results found!</h3>" );
+							}
 						  });
 						//alert($('#guidedSell').val());
 						/*$('#guidedSell').submit(function(event) {
