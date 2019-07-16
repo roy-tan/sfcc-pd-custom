@@ -13,4 +13,9 @@ $(document).ready( function() {
 			}
 		});
 	}
+
+	$('.experience-guidedsell_assets-gsAnswer').each (function() {
+		$(this).find('.guidedSellMethod').appendTo('.guidedSellBtnGroup');
+		$(this).remove();
+	});
 });
