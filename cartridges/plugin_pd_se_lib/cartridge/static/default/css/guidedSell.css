@@ -12,6 +12,8 @@
 	box-shadow: none;
     position: relative;
     margin-right: 20px;
+    height: 142px;
+    width: 142px;
 }
 
 .guidedSellWrap .guidedSellBtnGroup .guidedSellMethod.active {
@@ -35,9 +37,6 @@
 	background-repeat: no-repeat;
 	border: 2px solid transparent;
     transition: all 0.5s;
-    height: 142px;
-    width: 142px;
-    
 }
 
 /*
