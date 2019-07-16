@@ -1,18 +1,23 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/layout.css');
-    assets.addCss('/css/pagedesigner-bootstrap.min.css');
+    //assets.addCss('/css/pagedesigner-bootstrap.min.css');
 </isscript>
 <div class="row mx-n2">
 
-    <isprint value="${pdict.question_text}" encoding="off"/>
+    
     <isif condition="${pdict.question_banner}">
         <img class="question-banner" src="${pdict.question_banner.src.desktop}" />
     </isif>
-
-    <input name="prefn" value="${pdict.preference_name}" type="hidden">
-
-
-    <isprint value="${pdict.regions.gsAnswers.setClassName("col-12").render()}" encoding="off"/>
-    
+    <div class="guidedSellCont">
+        <div class="headingWrap">
+            <h3 class="headingTop text-center"><isprint value="${pdict.question_text}" encoding="off"/></h3>
+        </div>
+        <div class="guidedSellWrap">
+            <div class="btn-group guidedSellBtnGroup " role="group" data-toggle="buttons">
+                <input name="prefn" value="${pdict.preference_name}" type="hidden">
+                <isprint value="${pdict.regions.gsAnswers.render()}" encoding="off"/>
+            </div>
+        </div>            
+    </div>
 </div>
