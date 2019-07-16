@@ -14,18 +14,27 @@ module.exports.render = function (context) {
     var component = context.component;
     var content = context.content;
 
+    model.id = 'titlescene-' + context.component.getID();
 
     if (content.question_text) {
         model.question_text = content.question_text;
         
         model.preference_name = content.preference_name;
-        /*model.question_banner = {
-            src: {
-                mobile  : ImageTransformation.url(content.question_banner.file, mobileImageTransformation),
-                desktop : ImageTransformation.url(content.question_banner.file, desktopImageTransformation)
-            },
-            alt         : content.question_banner.file.getAlt()
-        }*/
+        model.height ='height: auto;';
+        if (content.question_banner) {
+            var mobileImageTransformation = ImageTransformation.scale(content.question_banner.metaData, 'mobile');
+            var desktopImageTransformation = ImageTransformation.scale(content.question_banner.metaData, 'desktop');
+            model.height ='height: 100vh;';
+            model.question_banner = {
+                src: {
+                    mobile  : ImageTransformation.url(content.question_banner.file, mobileImageTransformation),
+                    desktop : ImageTransformation.url(content.question_banner.file, desktopImageTransformation)
+                },
+                alt         : content.question_banner.file.getAlt(),
+                focalPointX : content.question_banner.focalPoint.x * 100 + '%',
+                focalPointY : content.question_banner.focalPoint.y * 100 + '%'
+            };
+        }
     }
 
 
