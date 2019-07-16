@@ -16,4 +16,12 @@
 <iscomment> Form End </iscomment>
 </form>
     
+    <div class="container search-results" style="display: none;">
+        <div class="row search-nav">
+            
+        </div>
+        <div class="row guidedSellResults">
+            
+        </div>
+    </div>
 </div>
