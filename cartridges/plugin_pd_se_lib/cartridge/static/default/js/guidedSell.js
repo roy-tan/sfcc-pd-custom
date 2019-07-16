@@ -38,6 +38,7 @@ $(document).ready( function() {
 									var content = $( data ).find( ".tab-content.col-12" );
 									$( ".search-results .guidedSellResults" ).empty().append( content );
 									$('.refinement-bar').remove();
+									$('.tab-content .tab-pane .col-sm-12.col-md-9').removeClass('col-md-9').addClass('col-md-12');
 									$('.search-results').show();
 								} else {
 									$( ".search-results .guidedSellResults" ).empty().append( "<h3>There were no results found!</h3>" );
