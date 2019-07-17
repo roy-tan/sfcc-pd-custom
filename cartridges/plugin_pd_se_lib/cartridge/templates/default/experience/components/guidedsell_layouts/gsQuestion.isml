@@ -19,12 +19,10 @@
 		}
 </style>
 <div class="row mx-n2 first-wrap" id="${pdict.id}-first-wrap">
-
-    
     <isif condition="${pdict.question_banner}">
         <img class="question-banner" src="${pdict.question_banner.src.desktop}" style="display: none;"/>
     </isif>
-    <div class="guidedSellCont" style="${pdict.height} margin: 0 auto;padding-top: 25px;">
+    <div class="guidedSellCont" style="${pdict.height} margin: 0 auto;padding-top: 25px;" data-src="${pdict.inputType}">
         <div class="headingWrap">
             <h3 class="headingTop text-center"><isprint value="${pdict.question_text}" encoding="off"/></h3>
         </div>
