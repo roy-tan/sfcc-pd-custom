@@ -21,6 +21,11 @@ module.exports.render = function (context) {
         
         model.preference_name = content.preference_name;
         model.height ='height: auto;';
+        model.inputType = "radio";
+        if (content.question_multi) {
+            model.inputType = "checkbox";
+        }
+
         if (content.question_banner) {
             var mobileImageTransformation = ImageTransformation.scale(content.question_banner.metaData, 'mobile');
             var desktopImageTransformation = ImageTransformation.scale(content.question_banner.metaData, 'desktop');
