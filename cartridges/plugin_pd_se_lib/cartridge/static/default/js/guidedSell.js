@@ -1,5 +1,11 @@
 $(document).ready( function() {
-	if (('html.veiled').length > 0) {
+
+	$('.guidedSellCont').each(function() {
+		if ($(this).attr('data-src') === 'checkbox'){
+			//$(this).find('input[name*=prefv]').attr('type', 'checkbox');
+		}
+	});
+	if (window.location === window.parent.location) {
 		if ($('[class*=gsQuestion]').length > 0) {
 			var length = $('[class*=gsQuestion]').length
 			var searchQuery;
@@ -52,14 +58,25 @@ $(document).ready( function() {
 
 		$('.experience-guidedsell_assets-gsAnswer').each (function() {
 			var oneLabel = $(this).find('.guidedSellMethod');
-			oneLabel.click(function() {
-				$(this).addClass('active');
-				$(this).siblings().removeClass('active');
-			});
 			var questionParent = $(this).parent().parent();
+			oneLabel.click(function(evt) {
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+			});
+			
 			oneLabel.appendTo(questionParent);
 			$(this).remove();
 		});
 		$('.experience-gsAnswers').remove();
+	} else {
+		//inside Page Designer
+		$('.guidedSellWrap').each(function () {
+			var trueOuterwidth = 0;
+			$(this).find('.experience-guidedsell_assets-gsAnswer').each(function () {
+				trueOuterwidth += $(this).outerWidth(true);
+			});
+			$(this).find('.experience-gsAnswers').css('width', trueOuterwidth + 'px');
+			$(this).find('.experience-guidedsell_assets-gsAnswer').css('float', 'left');
+		});
 	}
 });
