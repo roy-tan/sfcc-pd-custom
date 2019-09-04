@@ -38,8 +38,8 @@ function RegionModel(container, name) {
 /**
  * Set the tag name of a region
  *
- * @param {string} tagName the name of the tag (default: div)
- * @returns {RegionModel}
+ * @param {string} name the name of the tag (default: div)
+ * @return {RegionModel} The region model object
  */
 RegionModel.prototype.setTagName = function tagName(name) {
     this.regionRenderSettings.setTagName(name);
@@ -50,7 +50,7 @@ RegionModel.prototype.setTagName = function tagName(name) {
  * Set the class name of a region
  *
  * @param {string} cssClass the class name(s) of the region
- * @returns {RegionModel}
+ * @return {RegionModel} The region model object
  */
 RegionModel.prototype.setClassName = function setClassName(cssClass) {
     setAttribute(this.regionRenderSettings, 'class', cssClass);
@@ -62,7 +62,7 @@ RegionModel.prototype.setClassName = function setClassName(cssClass) {
  *
  * @param {string} name the region tag attribute name
  * @param {string} value the region tag attribute value
- * @returns {RegionModel}
+ * @return {RegionModel} The region model object
  */
 RegionModel.prototype.setAttribute = function attr(name, value) {
     setAttribute(this.regionRenderSettings, name, value);
@@ -74,13 +74,13 @@ RegionModel.prototype.setAttribute = function attr(name, value) {
  *
  * @param {string} tagName the component tag name to set
  * @param {number} [position] optional position to only set it for a specific component
- * @returns {RegionModel}
+ * @return {RegionModel} The region model object
  */
 RegionModel.prototype.setComponentTagName = function componentTagName(tagName, position) {
     if (typeof position === 'number') {
         // ignore request in case position is invalid
         if (!this.region.visibleComponents
-                || position >= this.region.visibleComponents.length) {
+            || position >= this.region.visibleComponents.length) {
             return this;
         }
 
@@ -96,8 +96,8 @@ RegionModel.prototype.setComponentTagName = function componentTagName(tagName, p
  * Set the class name for a given or all components of a region
  *
  * @param {*} cssClass the component class name to set
- * @param {number} [position] optional position to only set it for a specific component
- * @returns {RegionModel}
+ * @param {string} componentSelector optional has position attribute to only set it for a specific component
+ * @return {RegionModel} The region model object
  */
 RegionModel.prototype.setComponentClassName = function setComponentClassName(cssClass, componentSelector) {
     this.setComponentAttribute('class', cssClass, componentSelector);
@@ -109,8 +109,8 @@ RegionModel.prototype.setComponentClassName = function setComponentClassName(css
  *
  * @param {string} name the name of the attribute
  * @param {string} value the value of the attribute
- * @param {number} [position] optional position to only set it for a specific component
- * @returns {RegionModel}
+ * @param {string} componentSelector optional has position attribute to only set it for a specific component
+ * @return {RegionModel} The region model object
  */
 RegionModel.prototype.setComponentAttribute = function setComponentAttribute(name, value, componentSelector) {
     // default is all components
@@ -121,7 +121,7 @@ RegionModel.prototype.setComponentAttribute = function setComponentAttribute(nam
     if (typeof position === 'number') {
         // ignore request in case position is invalid
         if (!this.region.visibleComponents
-                || position >= this.region.visibleComponents.length) {
+            || position >= this.region.visibleComponents.length) {
             return this;
         }
         component = this.region.visibleComponents[position];
@@ -140,7 +140,7 @@ RegionModel.prototype.setComponentAttribute = function setComponentAttribute(nam
 /**
  * Renders the entire region
  *
- * @returns the rendered region
+ * @returns {Object} the rendered region
  */
 RegionModel.prototype.render = function render() {
     return PageMgr.renderRegion(this.region, this.regionRenderSettings);

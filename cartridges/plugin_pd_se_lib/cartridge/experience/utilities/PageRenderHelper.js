@@ -1,25 +1,32 @@
 'use strict';
 
-var RegionModelRegistry = require('~/cartridge/experience/utilities/RegionModelRegistry.js');
+var RegionModelRegistry = require('*/cartridge/experience/utilities/RegionModelRegistry.js');
 
+/**
+ * Parse Render Parameters
+ *
+ * @param {Object} renderParametersJson The json render parameters
+ *
+ * @returns {Object} render parameters
+ */
 function parseRenderParameters(renderParametersJson) {
     var renderParameters = {};
     if (renderParametersJson) {
         try {
             renderParameters = JSON.parse(renderParametersJson);
         } catch (e) {
-            require('dw/system/Logger').error('Unable to parse renderParameters: ' + renderParametersJson);
+            var Logger = require('dw.system.Logger');
+            Logger.error('Unable to parse renderParameters: ' + renderParametersJson);
         }
     }
     return renderParameters;
 }
 
-
 module.exports = {
     /**
      * Assembles the page meta data.
      *
-     * @param context {Object} The context of the page
+     * @param {Object} context The context of the page
      *
      * @returns {string} ISML path to decorator template
      */
@@ -28,11 +35,11 @@ module.exports = {
         var decorator;
         var cartridgeDecorator;
 
-
         try {
             cartridgeDecorator = require('*/cartridge/experience/defaultdecorator');
         } catch (e) {
-            dw.system.Logger.warn('Unable to determine frontend decorator ' + e);
+            var Logger = require('dw.system.Logger');
+            Logger.warn('Unable to determine frontend decorator ' + e);
         }
         // determine decorator
         if (renderParameters.decorator) {
@@ -51,12 +58,12 @@ module.exports = {
     /**
      * Assembles the page meta data.
      *
-     * @param page {dw.experience.Page} The page object
+     * @param {dw.experience.Page} page The page object
      *
      * @returns {dw.web.PageMetaData} The page meta data
      */
     getPageMetaData: function getPageMetaData(page) {
-        var pageMetaData = request.pageMetaData;
+        var pageMetaData = request.pageMetaData; // eslint-disable-line no-undef
 
         pageMetaData.title = page.pageTitle;
         pageMetaData.description = page.pageDescription;
@@ -69,20 +76,20 @@ module.exports = {
      * Returns the RegionModel registry for a given container (Page or Component).
      *
      * @param {dw.experience.Page|dw.experience.Component} container a component or page object
-     * @param {String} containerType components or pages
+     * @param {string} containerType components or pages
      *
      * @returns {experience.utilities.RegionModelRegistry} The container regions
      */
     getRegionModelRegistry: function getRegionModelRegistry(container) {
         var containerType;
-        if (container && container instanceof dw.experience.Page) {
+        if (container && container instanceof dw.experience.Page) { // eslint-disable-line no-undef
             containerType = 'pages';
-        } else if (container && container instanceof dw.experience.Component) {
+        } else if (container && container instanceof dw.experience.Component) { // eslint-disable-line no-undef
             containerType = 'components';
         } else {
             return null;
         }
-        var metaDefinition = require('~/cartridge/experience/' + containerType + '/' + container.typeID.replace(/\./g, '/') + '.json');
+        var metaDefinition = require('*/cartridge/experience/' + containerType + '/' + container.typeID.replace(/\./g, '/') + '.json');
 
         return new RegionModelRegistry(container, metaDefinition);
     },
@@ -92,7 +99,16 @@ module.exports = {
      * @returns {boolean} The container regions
      */
     isInEditMode: function isInEditMode() {
-        return request.httpPath.indexOf('__SYSTEM__Page-Show') > 0;
+        return request.httpPath.indexOf('__SYSTEM__Page-Show') > 0; // eslint-disable-line no-undef
+    },
+
+    /**
+     * Returns a css safe string of a given input string
+     * @param {string} input a css class name.
+     * @return {string} css
+     */
+    safeCSSClass: function (input) {
+        return encodeURIComponent(input.toLowerCase()).replace(/%[0-9A-F]{2}/gi, '');
     }
 
 };

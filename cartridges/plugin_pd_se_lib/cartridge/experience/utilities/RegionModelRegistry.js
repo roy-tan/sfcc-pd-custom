@@ -1,5 +1,5 @@
 
-var RegionModel = require('./RegionModel');
+var RegionModel = require('*/cartridge/experience/utilities/RegionModel.js');
 
 /**
  * Utility providing shortened access to render a subregion of the given container within a template
@@ -13,11 +13,11 @@ var RegionModelRegistry = function (container, metaDataDefinition) {
 };
 
 /**
- * Registers all regions that are defined in the given meta definitions
+ * Registers all regions that are defined in the given meta definitions.
+ *
+ * Returns nothing as it only registers the regions for itself.
  *
  * @param {Object} metadef The components meta definitions
- *
- * @returns {Object} No value as it only registers the regions for itself.
  */
 RegionModelRegistry.prototype.addRegions = function (metadef) {
     if (metadef && metadef.region_definitions) {
