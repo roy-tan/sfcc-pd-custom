@@ -3,6 +3,7 @@
     assets.addCss('/css/layout.css');
     assets.addCss('/css/guidedSell.css');
     assets.addJs('/js/guidedSell.js');
+    assets.addJs('/js/search.js');
 </isscript>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <div class="row mx-n2">

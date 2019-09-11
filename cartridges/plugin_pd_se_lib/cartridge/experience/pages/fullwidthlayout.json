@@ -4,7 +4,8 @@
   "region_definitions":[
     {
       "id":"main",
-      "name":"Main Region"
+      "name":"Main Region",
+      "max_components": 6
     }
   ]
 }
