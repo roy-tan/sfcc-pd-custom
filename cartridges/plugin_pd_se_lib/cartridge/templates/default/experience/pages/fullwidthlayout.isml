@@ -9,7 +9,7 @@
 	<!--- the page markup --->
 	<div>
 	    <div id="${pdict.page.ID}">
-	        <isprint value="${pdict.regions.main.render()}" encoding="off"/>
+			<isprint value="${pdict.regions.main.setClassName("col-12 no-padding").render()}" encoding="off"/>
 	    </div>
 	</div>
 </isdecorate>

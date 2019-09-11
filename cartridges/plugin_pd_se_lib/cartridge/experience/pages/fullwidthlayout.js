@@ -26,12 +26,14 @@ module.exports.render = function (context) {
     model.decorator = PageRenderHelper.determineDecorator(context);
 
     if (PageRenderHelper.isInEditMode()) {
-        dw.system.HookMgr.callHook('app.experience.editmode', 'editmode');
+        var HookManager = require('dw/system/HookMgr');
+        HookManager.callHook('app.experience.editmode', 'editmode');
+        model.resetEditPDMode = true;
     }
 
     // render the page
-    var expiryTime = new Date(Date.now());
+/*     var expiryTime = new Date(Date.now());
     expiryTime.setMinutes(expiryTime.getMinutes() + 60);
-    response.setExpires(expiryTime);
+    response.setExpires(expiryTime); */
     return new Template('experience/pages/fullwidthlayout').render(model).text;
 };
