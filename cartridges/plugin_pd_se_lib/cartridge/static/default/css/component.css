@@ -15,3 +15,62 @@
     padding-right: 0px;
     padding-left: 0px;
 }
+
+.image-heading-text {
+  font-family: Arial,sans-serif;
+  color: #000
+}
+
+.mainbanner-image {
+  height: auto;
+}
+
+.custom-slide-cta {
+  margin: 20px 0;
+}
+
+.custom-slide-cta__inner__green {
+  background: #3bd373;
+  display: inline-block;
+}
+
+.custom-slide-cta__inner {
+  position: relative;
+  overflow: hidden;
+  font-family: Arial,sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 26px;
+  padding: 8px 40px;
+  letter-spacing: .06em;
+  -webkit-transition: all .12s ease-in-out;
+  -moz-transition: all .12s ease-in-out;
+  transition: all .12s ease-in-out;
+}
+
+.custom-slide-inner {
+  opacity: 1;
+  transform: translateX(0);
+  margin-right: 60px;
+  display: inline;
+}
+
+.hover-image {
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+}
+
+.hover-image.left { 
+  left : 3%
+}
+
+.hover-image.middle { 
+  left : 32%
+}
+
+.hover-image.right { 
+  left : 62%
+}

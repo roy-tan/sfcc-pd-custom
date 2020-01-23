@@ -1,0 +1,22 @@
+{
+  "name": "YouTube Video",
+  "description": "YouTube Embedded Video",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "youtube_properties",
+      "name": "YouTube Video Properties",
+      "description": "The properties used to configure the display of the linked YouTube video.  Please specify the videoId as well as the layout dimensions for this video.",
+      "attribute_definitions": [
+        {
+          "id": "video_id",
+          "name": "YouTube Video ID",
+          "description": "Represents the YouTube ID of the video being linked (can be retrieved via the YouTube video's url).",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
