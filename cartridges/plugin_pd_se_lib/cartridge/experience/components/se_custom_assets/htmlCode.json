@@ -1,0 +1,22 @@
+{
+  "name": "HTML Code",
+  "description": "Raw HTML",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "html_properties",
+      "name": "HTML Code Properties",
+      "description": "The properties used to insert HTML code",
+      "attribute_definitions": [
+        {
+          "id": "html_code",
+          "name": "HTML Code",
+          "description": "Raw HTML Code",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
