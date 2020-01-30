@@ -91,28 +91,30 @@ server.get('Show', cache.applyShortPromotionSensitiveCache, consentTracking.cons
 
     const pageDesigner = require('*/cartridge/scripts/utils/pageDesigner');
     const PageMgr = require('dw/experience/PageMgr');
-    const categoryId = req.querystring.cgid.toLowerCase();
-    const page = PageMgr.getPage('clp-' + categoryId);
-    let productSearch = result.productSearch;
-    const isPDPage = page && page.isVisible() && productSearch.category;
+    if (req.querystring.cgid)
+    {
+        const categoryId = req.querystring.cgid.toLowerCase();
+        const page = PageMgr.getPage('clp-' + categoryId);
+        let productSearch = result.productSearch;
+        const isPDPage = page && page.isVisible() && productSearch.category;
 
-    if (isPDPage && productSearch.isCategorySearch) {
-        // hook to get calculated meta tags
-        res.setViewData({
-            clp: true,
-            pageDesignerProductSearch: productSearch
-        });
-        this.on('route:BeforeComplete', function (req, res) { // eslint-disable-line no-shadow
-            const viewData = res.getViewData();
-
-            pageDesigner.renderPage(page, res, {
-                category: productSearch.category,                
-                pageMetaData: viewData.CurrentPageMetaData
+        if (isPDPage && productSearch.isCategorySearch) {
+            // hook to get calculated meta tags
+            res.setViewData({
+                clp: true,
+                pageDesignerProductSearch: productSearch
             });
-        });
-        return next();
-    }
+            this.on('route:BeforeComplete', function (req, res) { // eslint-disable-line no-shadow
+                const viewData = res.getViewData();
 
+                pageDesigner.renderPage(page, res, {
+                    category: productSearch.category,                
+                    pageMetaData: viewData.CurrentPageMetaData
+                });
+            });
+            return next();
+        }
+    }
     if (result.category && result.categoryTemplate) {
         template = result.categoryTemplate;
     }
