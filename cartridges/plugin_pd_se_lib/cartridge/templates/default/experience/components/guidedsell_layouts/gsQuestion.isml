@@ -1,15 +1,36 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/layout.css');
-    assets.addCss('/css/pagedesigner-bootstrap.min.css');
+    //assets.addCss('/css/pagedesigner-bootstrap.min.css');
 </isscript>
-<div class="row mx-n2">
-
-    <isprint value="${pdict.question_text}" encoding="off"/>
-
-    <input name="prefn${pdict.question_number}" value="${pdict.preference_name}" type="hidden">
-
-
-    <isprint value="${pdict.regions.gsAnswers.setClassName("col-12").render()}" encoding="off"/>
-    
+<style>
+@media (min-width: 768px) {
+			.first-wrap {
+				height: 100%;
+				width: 100vw;
+				background-size: cover;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-attachment: scroll;
+			}
+				${'#'}${pdict.id}-first-wrap {
+					background-image: url('${pdict.question_banner.src.desktop}');
+			}
+		}
+</style>
+<div class="row mx-n2 first-wrap" id="${pdict.id}-first-wrap">
+    <isif condition="${pdict.question_banner}">
+        <img class="question-banner" src="${pdict.question_banner.src.desktop}" style="display: none;"/>
+    </isif>
+    <div class="guidedSellCont" style="${pdict.height} margin: 0 auto;padding-top: 25px;" data-src="${pdict.inputType}">
+        <div class="headingWrap">
+            <h3 class="headingTop text-center"><isprint value="${pdict.question_text}" encoding="off"/></h3>
+        </div>
+        <div class="guidedSellWrap">
+            <div class="btn-group guidedSellBtnGroup " role="group" data-toggle="buttons">
+                <input name="prefn" value="${pdict.preference_name}" type="hidden">
+                <isprint value="${pdict.regions.gsAnswers.render()}" encoding="off"/>
+            </div>
+        </div>            
+    </div>
 </div>

@@ -6,7 +6,8 @@
       {
         "id":"column1FullWidth",
         "name":"Column 1 Full Width",
-        "max_components":1
+        "max_components":1,
+        "component_type_exclusions":[{"type_id":"banner"}]
       }
   ]
 }

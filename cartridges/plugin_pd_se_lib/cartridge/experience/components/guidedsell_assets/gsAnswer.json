@@ -9,6 +9,12 @@
       "description": "The content to show in this component",
       "attribute_definitions": [
         {
+          "id": "answer_icon",
+          "name": "Answer Icon",
+          "type": "image",
+          "required": false
+        },
+        {
           "id": "answer_text",
           "name": "Answer Text",
           "type": "string",
