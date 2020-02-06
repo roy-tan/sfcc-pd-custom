@@ -29,12 +29,20 @@
   margin: 20px 0;
 }
 
-.custom-slide-cta__inner__green {
-  background: #3bd373;
-  display: inline-block;
+.bgColor-green {
+  background-color:#3bd373;
+}
+
+.bgColor-blue {
+  background-color:#07b;
+}
+
+.bgColor-purple {
+  background-color:#7469ff;
 }
 
 .custom-slide-cta__inner {
+  display: inline-block;
   position: relative;
   overflow: hidden;
   font-family: Arial,sans-serif;
@@ -73,4 +81,12 @@
 
 .hover-image.right { 
   left : 62%
+}
+
+.legal {
+  font-size: 11px;
+  position: relative;
+  text-align: center;
+  left: 0;
+  bottom: 10px;
 }

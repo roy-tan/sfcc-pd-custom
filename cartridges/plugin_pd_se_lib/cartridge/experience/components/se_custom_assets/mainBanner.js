@@ -16,9 +16,10 @@ module.exports.render = function (context) {
     model.overlayAlign = content.overlayAlign;
     model.textColor = content.textColor;
     model.heading = content.heading;
-    model.terms = content.terms;
+    model.terms = content.terms ? content.terms : null;
     model.image = ImageTransformation.getScaledImage(content.image);
-    model.categoryLink = URLUtils.url('Search-Show', 'cgid', content.categoryLink.getID()).toString();
-
+    model.bannerLink = content.bannerLink ? content.bannerLink : '#';
+    model.bannerLinkText = content.bannerLinkText ? content.bannerLinkText : null;
+    model.bannerLinkColor = content.bannerLinkColor;    
     return new Template('experience/components/se_custom_assets/mainBanner').render(model).text;
 };
