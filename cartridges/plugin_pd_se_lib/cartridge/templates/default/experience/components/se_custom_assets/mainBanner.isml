@@ -5,7 +5,7 @@
 </isscript>
 
 <div class="mainbanner-container">
-    <a href="${pdict.categoryLink}">
+    <a href="${pdict.bannerLink}">
         <div class="row">
             <div class="col-12">
                 <figure class="mainbanner-figure image-component">
@@ -28,11 +28,11 @@
                             </div>
                         </div>
                         <div class="custom-slide-cta">
-                            <div class="custom-slide-cta__inner custom-slide-cta__inner__green" data-alt-text="${Resource.msg('pd.main.banner.buy.now','pageDesigner',null)}">
-                           <span>Buy now</span>
+                            <div class="custom-slide-cta__inner bgColor-${pdict.bannerLinkColor}" data-alt-text="${Resource.msg('pd.main.banner.buy.now','pageDesigner',null)}">
+                           <span>${pdict.bannerLinkText}</span>
                             </div>
                         </div>      
-                        <isif condition="${pdict.terms}">
+                        <isif condition="${pdict.terms.length !== null}">
                             <div class="legal"><span style="color:${pdict.textColor};">${pdict.terms}</span></div>
                         </isif>                                                              
                     </div>

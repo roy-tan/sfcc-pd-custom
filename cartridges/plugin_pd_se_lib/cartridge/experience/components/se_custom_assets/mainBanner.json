@@ -27,7 +27,7 @@
           "description": "Alignment of overlay content",
           "type": "enum",
           "values": ["left","middle","right"],
-          "default_value": "middle",
+          "default_value": "right",
           "required": true
         },
         {
@@ -55,14 +55,28 @@
       ]
     },
     {
-      "id": "shopNowLink",
-      "name": "Shop Now Link",
-      "description": "The Shop Now link on the banner image",
+      "id": "bannerLink",
+      "name": "Banner Link Parameters",
+      "description": "Link on the banner image",
       "attribute_definitions": [
         {
-          "id": "categoryLink",
-          "name": "Category Link",
-          "type": "category",
+          "id": "bannerLink",
+          "name": "Link",
+          "type": "url",
+          "required": true
+        },
+        {
+          "id": "bannerLinkText",
+          "name": "Button Text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "bannerLinkColor",
+          "name": "Button Color",
+          "type": "enum",
+          "values": ["green","blue","purple"],
+          "default_value": "green",
           "required": true
         }
       ]
