@@ -1,0 +1,21 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+
+<isdecorate template="common/layout/pdStorePage">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');        
+    </isscript>
+
+    <div class="storepage" id="${pdict.page.ID}">   
+        <div class="container">
+            <div class="row">
+                <isprint value="${pdict.regions.top.setClassName(" col-12").render()}" encoding="off" />
+            </div>          
+            <div class="row">
+                <isprint value="${pdict.regions.main.setClassName(" col-12").render()}" encoding="off" />
+            </div>  
+            <div class="row">
+                <isprint value="${pdict.regions.bottom.setClassName(" col-12").render()}" encoding="off" />
+            </div>                
+        </div>     
+    </div>
+</isdecorate>

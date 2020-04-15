@@ -41,6 +41,10 @@
   background-color:#7469ff;
 }
 
+.bgColor-orange {
+  background-color:#ff5000;
+}
+
 .custom-slide-cta__inner {
   display: inline-block;
   position: relative;
@@ -89,4 +93,14 @@
   text-align: center;
   left: 0;
   bottom: 10px;
+}
+
+.box {
+	font-family: GantModernBold,sans-serif;
+	max-width: 160px;
+  padding: 11px 8px;
+  font-size: .694rem;
+	color: #fff;
+	border-color: #fff;
+	border: 1px solid #fff;
 }

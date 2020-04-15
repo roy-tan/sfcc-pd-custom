@@ -1,0 +1,11 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/search.js');
+    assets.addCss('/css/search.css');
+</isscript>
+
+<isif condition="${pdict.productSearch.productIds.length > 0}">                                                          
+    <div class="row product-grid">                                 
+        <isinclude template="search/productGrid" />
+    </div>    
+</isif>

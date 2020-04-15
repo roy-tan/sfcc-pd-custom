@@ -1,0 +1,29 @@
+{
+    "name":"Store Page with regions",
+    "description":"Store page with top, main and bottom regions",
+    "region_definitions":[
+      {
+        "id":"top",
+        "name":"Top Region"
+      },
+      {
+        "id":"main",
+        "name":"Main Region",
+        "component_type_exclusions": [
+          { "type_id": "assets.categorytile" },
+          { "type_id": "assets.headlinebanner" },
+          { "type_id": "assets.producttile" },
+          { "type_id": "assets.ruledrivenproducttile" },
+          { "type_id": "assets.texttile" },
+          { "type_id": "layouts.carousel" },
+          { "type_id": "einstein.categoryrecommendation" },
+          { "type_id": "einstein.noanchorrecommendation" },
+          { "type_id": "einstein.productrecommendation" }
+        ]
+      },
+      {
+        "id":"bottom",
+        "name":"Bottom Region"
+      }      
+    ]
+}

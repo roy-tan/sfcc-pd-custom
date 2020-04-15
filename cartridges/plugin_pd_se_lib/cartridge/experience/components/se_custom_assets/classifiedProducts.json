@@ -1,0 +1,21 @@
+{
+  "name": "Classified Products",
+  "description": "Products classified by a specific category",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "classificationCategory",
+      "name": "Classification Category",
+      "description": "Classification category used for the products",
+      "attribute_definitions": [
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "category",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
