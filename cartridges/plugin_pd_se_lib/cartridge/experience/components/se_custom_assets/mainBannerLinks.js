@@ -16,10 +16,13 @@ module.exports.render = function (context) {
     model.overlayAlign = content.overlayAlign;
     model.textColor = content.textColor;
     model.heading = content.heading;
-    model.terms = content.terms ? content.terms : null;
     model.image = ImageTransformation.getScaledImage(content.image);
-    model.bannerLink = content.bannerLink ? content.bannerLink : '#';
-    model.bannerLinkText = content.bannerLinkText ? content.bannerLinkText : null;
-    model.bannerLinkColor = content.bannerLinkColor;
-    return new Template('experience/components/se_custom_assets/mainBanner').render(model).text;
+    model.link_1 = content.link_1 ? content.link_1 : '#';
+    model.linkText_1 = content.linkText_1 ? content.linkText_1 : null;
+    model.link_2 = content.link_2 ? content.link_2 : '#';
+    model.linkText_2 = content.linkText_2 ? content.linkText_2 : null;
+    model.link_3 = content.link_3 ? content.link_3 : '#';
+    model.linkText_3 = content.linkText_3 ? content.linkText_3 : null;
+
+    return new Template('experience/components/se_custom_assets/mainBannerLinks').render(model).text;
 };

@@ -1,0 +1,44 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageAndTextCommon.css');
+    assets.addCss('/css/component.css');
+</isscript>
+
+<div class="mainbanner-container">    
+        <div class="row">
+            <div class="col-12">
+                <figure class="mainbanner-figure image-component">
+                    <picture>
+                        <source srcset="${pdict.image.src.tablet}" media="(min-width: 768px)"/>
+                        <source srcset="${pdict.image.src.desktop}" media="(min-width: 1024px)"/>
+                        <img
+                            class="mainbanner-image image-fluid common-image-component"
+                            src="${pdict.image.src.mobile}"
+                            style="--focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY}"
+                            <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif>
+                        />
+                    </picture>
+                    <div class="hover-image ${pdict.overlayAlign}">
+                        <div class="row image-heading-text">
+                            <div class="col-12 text-sm-left text-center">
+                                <span style="color:${pdict.textColor};">
+                                    <isprint value="${pdict.heading}" encoding="off"/>
+                                </span>
+                            </div>
+                        </div>
+                        <div style="display: block">
+                            <isif condition="${pdict.linkText_1.length !== null}">
+                                <a class="box" href="${pdict.link_1}"><span>${pdict.linkText_1}</span></a>
+                            </isif>
+                            <isif condition="${pdict.linkText_2.length !== null}">
+                                <a class="box" href="${pdict.link_2}"><span>${pdict.linkText_2}</span></a>
+                            </isif>
+                            <isif condition="${pdict.linkText_3.length !== null}">
+                                <a class="box" href="${pdict.link_3}"><span>${pdict.linkText_3}</span></a>
+                            </isif>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>    
+</div>

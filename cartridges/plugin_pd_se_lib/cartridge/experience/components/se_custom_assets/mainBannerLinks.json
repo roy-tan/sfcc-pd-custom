@@ -1,6 +1,6 @@
 {
-  "name": "Main Banner - Adjustable Overlay Text",
-  "description": "Image, text overlay that links user to a category using the markup editor",
+  "name": "Main Banner with multiple links",
+  "description": "Banner with image and overlay links",
   "group": "se_custom_assets",
   "attribute_definition_groups": [
     {
@@ -44,40 +44,49 @@
           "name": "Heading",
           "type": "markup",
           "required": true
-        }
-        ,        
-        {
-          "id": "terms",
-          "name": "Terms & Conditions",
-          "type": "text",
-          "required": false
-        }        
+        }     
       ]
     },
     {
-      "id": "bannerLink",
-      "name": "Banner Link Parameters",
-      "description": "Link on the banner image",
+      "id": "bannerLinks",
+      "name": "Banner Links",
+      "description": "Links on the banner image",
       "attribute_definitions": [
         {
-          "id": "bannerLink",
-          "name": "Link",
+          "id": "link_1",
+          "name": "1st Link",
           "type": "url",
-          "required": true
+          "required": false
         },
         {
-          "id": "bannerLinkText",
-          "name": "Button Text",
+          "id": "linkText_1",
+          "name": "1st Link Text",
           "type": "string",
-          "required": true
+          "required": false
+        }, 
+        {
+          "id": "link_2",
+          "name": "2nd Link",
+          "type": "url",
+          "required": false
         },
         {
-          "id": "bannerLinkColor",
-          "name": "Button Color",
-          "type": "enum",
-          "values": ["orange","green","blue","purple"],
-          "default_value": "orange",
-          "required": true
+          "id": "linkText_2",
+          "name": "2nd Link Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "link_3",
+          "name": "3rd Link",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "linkText_3",
+          "name": "3rd Link Text",
+          "type": "string",
+          "required": false
         }
       ]
     }
