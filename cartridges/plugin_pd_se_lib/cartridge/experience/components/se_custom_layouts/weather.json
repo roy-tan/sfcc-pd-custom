@@ -1,0 +1,33 @@
+{
+    "name": "Weather-based Layout",
+    "description": "This is a layout component based on weather conditions",
+    "group": "se_custom_layouts",
+    "attribute_definition_groups": [   
+        {            
+            "id": "weatherSettings",
+            "name": "Weather Settings",
+            "description": "Weather criteria for layout to be displayed",
+            "attribute_definitions": [
+                {
+                    "id": "temperature",
+                    "name": "Temperature (Celsius)",
+                    "type": "integer",
+                    "required": true
+                },
+                {
+                  "id": "range",
+                  "name": "Temperature Range (+/-)",
+                  "type": "integer",
+                  "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"weather",
+            "name":"Weather Layout",
+            "component_type_exclusions": []
+        }
+    ]
+}
