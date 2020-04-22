@@ -15,9 +15,12 @@ module.exports.render = function (context) {
     var component = context.component;    
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
     setWeatherAttributes(model);
-    //model.PD_isInEditMode = PageRenderHelper.isInEditMode;
-    model.displayLayout = isInRange(model.weatherTemperature, context.content.temperature, context.content.range);    
-    return new Template('experience/components/se_custom_layouts/weather').render(model).text;
+    model.isInEditMode = PageRenderHelper.isInEditMode();    
+    var output;  
+    if (isInRange(model.weatherTemperature, context.content.temperature, context.content.range))
+        output = new Template('experience/components/se_custom_layouts/weather').render(model).text;
+    return output;
+    //return new Template('experience/components/se_custom_layouts/weather').render(model).text;
 };
 
 function isInRange(weatherTemperature, celsius, range)
