@@ -19,8 +19,7 @@ module.exports.render = function (context) {
     var output;  
     if (isInRange(model.weatherTemperature, context.content.temperature, context.content.range))
         output = new Template('experience/components/se_custom_layouts/weather').render(model).text;
-    return output;
-    //return new Template('experience/components/se_custom_layouts/weather').render(model).text;
+    return output;    
 };
 
 function isInRange(weatherTemperature, celsius, range)
