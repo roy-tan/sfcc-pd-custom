@@ -1,0 +1,113 @@
+{
+  "name": "Vimeo Video",
+  "description": "Vimeo Video",
+  "group": "se_custom_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "vimeo_properties",
+      "name": "Vimeo Video Properties",
+      "description": "The properties used to configure the display of the linked Vimeo video.  Please specify the videoId as well as the layout dimensions for this video.",
+      "attribute_definitions": [
+        {
+          "id": "vimeo_id",
+          "name": "Vimeo Video ID",
+          "description": "Represents the Vimeo ID of the video being linked (can be retrieved via the Vimeo video's url).",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "video_autoplay",
+          "name": "Enable Autoplay",
+          "description": "Check to ensure the video starts automatically",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "id": "video_controls",
+          "name": "Display controls on video",
+          "description": "Check if you would like to have a start/pause button on the video",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "id": "video_muted",
+          "name": "Mute Audio",
+          "description": "Check this box if you would like sound disabled during playing",
+          "type": "boolean",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "overlaySettings",
+      "name": "Video Overlay Buttons",
+      "description": "You can specify up to 3 buttons and links with color and position",
+      "attribute_definitions": [
+        {
+          "id": "overlayAlign",
+          "name": "Overlay Alignment",
+          "description": "Where would you like the buttons and links to appear?",
+          "type": "enum",
+          "values": ["left","middle","right"],
+          "default_value": "left",
+          "required": false
+        },
+        {
+          "id": "textColor",
+          "name": "Text Color",
+          "description": "Color of the button text and border",
+          "type": "enum",
+          "values": ["black","white","red"],
+          "default_value": "white",
+          "required": false
+        },
+        {
+          "id": "buttonTiming",
+          "name": "Button Timing",
+          "description": "When should the buttons appear?",
+          "type": "enum",
+          "values": ["1","5","10"],
+          "default_value": "1",
+          "required": false
+        },
+        {
+          "id": "link_1",
+          "name": "1st Link",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "linkText_1",
+          "name": "1st Link Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "link_2",
+          "name": "2nd Link",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "linkText_2",
+          "name": "2nd Link Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "link_3",
+          "name": "3rd Link",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "linkText_3",
+          "name": "3rd Link Text",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
