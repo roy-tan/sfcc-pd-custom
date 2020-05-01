@@ -1,0 +1,13 @@
+{
+    "name": "Display Top Visible Component",
+    "description": "Layout component to only display top visible component",
+    "group": "se_custom_layouts",
+    "attribute_definition_groups": [],
+    "region_definitions": [
+        {
+            "id":"topVisible",
+            "name":"Top Visible",
+            "component_type_exclusions": []
+        }
+    ]
+}

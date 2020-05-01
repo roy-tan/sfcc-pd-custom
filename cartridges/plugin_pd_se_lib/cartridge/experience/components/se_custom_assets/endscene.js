@@ -25,21 +25,7 @@ module.exports.render = function (context) {
 
     model.button_name = content.button_name;
     model.text_headline = content.text_headline.replace(expression, replacement);
-    
-    if (content.image) {
-        var mobileImageTransformation = ImageTransformation.scale(content.image.metaData, 'mobile');
-        var desktopImageTransformation = ImageTransformation.scale(content.image.metaData, 'desktop');
-
-        model.image = {
-            src: {
-                mobile  : ImageTransformation.url(content.image.file, mobileImageTransformation),
-                desktop : ImageTransformation.url(content.image.file, desktopImageTransformation)
-            },
-            alt         : content.image.file.getAlt(),
-            focalPointX : content.image.focalPoint.x * 100 + '%',
-            focalPointY : content.image.focalPoint.y * 100 + '%'
-        };
-    }
+    model.image = ImageTransformation.getScaledImage(content.image);
 
     // Fallback to button name if no name is explicitly given
     if (!content.button_name) {
