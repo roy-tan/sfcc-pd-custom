@@ -5,6 +5,6 @@
 
 <div class="selectTop">
     <div class="row mx-n2">
-        <isprint value="${pdict.regions.topVisible.setClassName("region col-12").render()}" encoding="off"/>
+        <isprint value="${pdict.regions.topVisible.setClassName("col-12").render()}" encoding="off"/>
     </div>
 </div>
