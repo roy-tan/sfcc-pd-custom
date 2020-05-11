@@ -1,7 +1,21 @@
 {
   "name": "Guided Sell Form",
   "group": "guidedsell_layouts",
-  "attribute_definition_groups": [],
+  "attribute_definition_groups": [
+    {
+      "id": "button_spec",
+      "name": "Button Specification",
+      "description": "Specify the link for the 'Show Now' button.",
+      "attribute_definitions": [
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
   "region_definitions": [
       {
         "id":"gsQuestions",
@@ -9,4 +23,5 @@
         "max_components":10
       }
   ]
+  
 }

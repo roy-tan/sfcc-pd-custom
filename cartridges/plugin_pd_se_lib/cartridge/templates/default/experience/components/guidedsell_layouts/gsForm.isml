@@ -9,12 +9,19 @@
 <div class="row mx-n2">
 
 <iscomment> Form Start </iscomment>
-<form action="/s/RefArchGlobal/guided%20sell-1/" method="get" name="guidedSelling" id="guidedSell">
+<form action="" method="get" name="guidedSelling" id="guidedSell" category="${pdict.category}">
 
     <isprint value="${pdict.regions.gsQuestions.setClassName("col-12").render()}" encoding="off"/>
 
-<iscomment> Form End </iscomment>
+
 </form>
+
+<section role="region" id="helper-tab" aria-label="helper tab" style="display: none;">
+    <div class="count">
+        <p><span class="total"></span><span class="styles">Styles</span></p>
+        <button>View</button>
+    </div>
+</section>
     
     <div class="container search-results" style="display: none;">
         <div class="row search-nav">
