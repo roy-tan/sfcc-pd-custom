@@ -82,7 +82,8 @@ function DoMyAjaxCall(siteName, language, searchCatParam, blnShowItems) {
 	});
 	//question.find()
 	var postUrl = "/on/demandware.store/Sites-" + siteName + "-Site/"+ language +"/Search-ShowAjax" + searchCatParam + "&" + searchQuery;
-	$.get(postUrl.replace("undefined",""))
+	postUrl = postUrl.replace("undefined","").replace("|","%7c");
+	$.get(postUrl)
 	.done(function( data ) {
 		var n = parseInt($(data).find('.result-count').text());
 
