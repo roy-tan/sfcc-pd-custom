@@ -1,5 +1,6 @@
 {
-  "name": "Questions",
+
+  "name": "Question",
   "description": "Shows aTestionl ",
   "group": "guidedsell_layouts",
   "attribute_definition_groups": [
@@ -46,7 +47,12 @@
       {
         "id":"gsAnswers",
         "name":"Answers",
-        "max_components":4
+        "max_components":4,
+        "component_type_exclusions": [
+          { "type_id": "guidedsell_layouts.gsQuestion" },
+          { "type_id": "guidedsell_layouts.gsForm" }
+        ]
       }
+      
   ]
 }

@@ -65,3 +65,37 @@
 	border-color: #4cd264;
 	outline: none !important;
 }
+
+#helper-tab {
+	display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    background-color: #000;
+    border: 1px solid #fff;
+    border-left: none;
+    padding: .5rem;
+    font-weight: 200;
+}
+
+#helper-tab p {
+	color: #fff;
+    text-align: center;
+    margin: .25rem 0 0;
+}
+#helper-tab p span {
+	display: block;
+    font-size: 1.875rem;
+}
+
+#helper-tab button {
+	font-size: .625rem;
+    width: 100%;
+    margin: .5rem 0 0;
+    border: none;
+}
