@@ -1,0 +1,60 @@
+{
+  "name": "Store Detail Page",
+  "description": "Store detail page with 3 layout regions",
+  "region_definitions": [
+    {
+      "id": "main",
+      "name": "Main Region",
+      "default_component_constructors": [
+        {
+          "type_id": "commerce_layouts.mobileGrid1r1c",
+          "name": "Store Banner",
+          "region_component_constructors": [
+            {
+              "region_id": "column1",
+              "component_constructors": [
+                {
+                  "type_id": "commerce_assets.mainBanner", "name": "Store Main Banner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type_id": "commerce_layouts.mobileGrid3r1c",
+          "name": "Store Details",
+          "region_component_constructors": [
+            {
+              "region_id": "column1",
+              "component_constructors": [
+                {
+                  "type_id": "commerce_assets.editorialRichText", "name": "Text Content"
+                }
+              ]
+            },
+            {
+              "region_id": "column2",
+              "component_constructors": [
+                {
+                  "type_id": "commerce_assets.editorialRichText", "name": "Text Content"
+                }
+              ]
+            },
+            {
+              "region_id": "column3",
+              "component_constructors": [
+                {
+                  "type_id": "commerce_assets.editorialRichText", "name": "Text Content"
+                }
+              ]
+            }                        
+          ]          
+        },
+        {
+          "type_id": "se_custom_assets.classifiedProducts",
+          "name": "Store Offers"
+        }
+      ]
+    }
+  ]
+}

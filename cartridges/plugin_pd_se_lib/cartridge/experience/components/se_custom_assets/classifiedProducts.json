@@ -15,6 +15,22 @@
           "required": true
         }
       ]
+    },
+    {
+      "id": "displayFormat",
+      "name": "Display Format",
+      "description": "Display Format",
+      "attribute_definitions": [
+        {
+          "id": "displayFormat",
+          "name": "Number of products per row (Desktop)",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+          "type": "custom.gridDisplayFormat"
+          }
+        }
+      ]
     }
   ],
   "region_definitions": []
