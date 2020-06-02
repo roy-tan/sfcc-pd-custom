@@ -4,8 +4,33 @@
     assets.addCss('/css/search.css');
 </isscript>
 
-<isif condition="${pdict.productSearch.productIds.length > 0}">                                                          
-    <div class="row product-grid">                                 
-        <isinclude template="search/productGrid" />
-    </div>    
+<isif condition="${pdict.productSearch.productIds.length > 0}">
+    <div class="row product-grid">
+        <isloop items="${pdict.productSearch.productIds}" var="product">
+            <div class="col-6 col-sm-${pdict.gridCol}">
+                <isobject object="${product.productSearchHit}" view="searchhit">
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true)}" />
+                </isobject>
+            </div>
+        </isloop>
+        <div class="col-12 grid-footer" data-sort-options="${JSON.stringify(pdict.productSearch.productSort)}"
+            data-page-size="${pdict.productSearch.pageSize}" data-page-number="${pdict.productSearch.pageNumber}">
+            <!--- More button --->
+            <isif condition="${pdict.productSearch.showMoreUrl !== ''}">
+                <div class="show-more">
+                    <div class="text-center">
+                        <button class="btn btn-outline-primary col-12 col-sm-${pdict.gridCol} more"
+                            data-url="${pdict.productSearch.showMoreUrl}">
+                            ${Resource.msg('button.more', 'search', null)}
+                        </button>
+                    </div>
+                </div>
+            </isif>
+
+            <input type="hidden" class="permalink" value="${pdict.productSearch.permalink}" />
+            <isif condition="${pdict.productSearch.category != null}">
+                <input type="hidden" class="category-id" value="${pdict.productSearch.category.id}" />
+            </isif>
+        </div>
+    </div>
 </isif>

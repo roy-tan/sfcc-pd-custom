@@ -41,6 +41,7 @@ function renderProducts(context) {
     model.productSearch = productSearch;       
    
     // Return the string representing the rendered mark-up for the configured html
+    model.gridCol = content.displayFormat ? content.displayFormat.value : "3";
     return new Template('experience/components/se_custom_assets/classifiedProducts').render(model).text;
 
 }
