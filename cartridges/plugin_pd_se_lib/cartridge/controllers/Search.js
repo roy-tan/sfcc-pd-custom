@@ -13,7 +13,7 @@ server.get('UpdateGrid', function (req, res, next) {
     var ProductSearch = require('*/cartridge/models/search/productSearch');
 
     var apiProductSearch = new ProductSearchModel();
-    apiProductSearch = searchHelper.setupSearch(apiProductSearch, req.querystring);
+    apiProductSearch = searchHelper.setupSearch(apiProductSearch, req.querystring, req.httpParameterMap);
     apiProductSearch.search();
 
     if (!apiProductSearch.personalizedSort) {
@@ -41,7 +41,7 @@ server.get('Refinebar', cache.applyDefaultCache, function (req, res, next) {
     var searchHelper = require('*/cartridge/scripts/helpers/searchHelpers');
 
     var apiProductSearch = new ProductSearchModel();
-    apiProductSearch = searchHelper.setupSearch(apiProductSearch, req.querystring);
+    apiProductSearch = searchHelper.setupSearch(apiProductSearch, req.querystring, req.httpParameterMap);
     apiProductSearch.search();
     var productSearch = new ProductSearch(
         apiProductSearch,
@@ -115,6 +115,7 @@ server.get('Show', cache.applyShortPromotionSensitiveCache, consentTracking.cons
             return next();
         }
     }
+    
     if (result.category && result.categoryTemplate) {
         template = result.categoryTemplate;
     }
@@ -131,7 +132,8 @@ server.get('Show', cache.applyShortPromotionSensitiveCache, consentTracking.cons
         refineurl: result.refineurl,
         category: result.category ? result.category : null,
         canonicalUrl: result.canonicalUrl,
-        schemaData: result.schemaData
+        schemaData: result.schemaData,
+        apiProductSearch: result.apiProductSearch
     });
 
     return next();

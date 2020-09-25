@@ -4,7 +4,7 @@
 </isscript>
 
 <div class="js-video video-content">
-	<video width="100%" height="100%" muted loop ${pdict.autoplay}>
+	<video width="100%" muted loop ${pdict.autoplay}>
 	  <source src="${pdict.videoUrl}" type="video/mp4">
 	</video>
 	
