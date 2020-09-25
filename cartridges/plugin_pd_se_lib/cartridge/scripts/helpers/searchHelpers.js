@@ -6,8 +6,9 @@
  * @param {dw.catalog.ProductSearchModel} apiProductSearch - API search instance
  * @param {Object} params - Provided HTTP query parameters
  * @return {dw.catalog.ProductSearchModel} - API search instance
+ * @param {Object} httpParameterMap - Query params
  */
-function setupSearch(apiProductSearch, params) {
+function setupSearch(apiProductSearch, params, httpParameterMap) {
     var CatalogMgr = require('dw/catalog/CatalogMgr');
     var searchModelHelper = require('*/cartridge/scripts/search/search');
 
@@ -15,7 +16,7 @@ function setupSearch(apiProductSearch, params) {
     var selectedCategory = CatalogMgr.getCategory(params.cgid);
     selectedCategory = selectedCategory && selectedCategory.online ? selectedCategory : null;
 
-    searchModelHelper.setProductProperties(apiProductSearch, params, selectedCategory, sortingRule);
+    searchModelHelper.setProductProperties(apiProductSearch, params, selectedCategory, sortingRule, httpParameterMap);
 
     if (params.preferences) {
         searchModelHelper.addRefinementValues(apiProductSearch, params.preferences);
@@ -46,7 +47,7 @@ function setupContentSearch(params) {
     var apiContentSearchModel = new ContentSearchModel();
 
     apiContentSearchModel.setRecursiveFolderSearch(true);
-    apiContentSearchModel.setSearchPhrase(params.q);    
+    apiContentSearchModel.setSearchPhrase(params.q);
     apiContentSearchModel.setFilteredByFolder(false);
     apiContentSearchModel.search();
     var contentSearchResult = apiContentSearchModel.getContent();
@@ -73,6 +74,7 @@ function applyCache(res) {
  * @param {Object} req - Provided HTTP query parameters
  * @param {Object} res - Provided HTTP query parameters
  * @return {Object} - an object with relevant search information
+ * @param {Object} httpParameterMap - Query params
  */
 function search(req, res) {
     var CatalogMgr = require('dw/catalog/CatalogMgr');
@@ -96,7 +98,7 @@ function search(req, res) {
         return { searchRedirect: searchRedirect.getLocation() };
     }
 
-    apiProductSearch = setupSearch(apiProductSearch, req.querystring);
+    apiProductSearch = setupSearch(apiProductSearch, req.querystring, req.httpParameterMap);
     apiProductSearch.search();
 
     if (!apiProductSearch.personalizedSort) {
@@ -147,7 +149,8 @@ function search(req, res) {
         maxSlots: maxSlots,
         reportingURLs: reportingURLs,
         refineurl: refineurl,
-        canonicalUrl: canonicalUrl
+        canonicalUrl: canonicalUrl,
+        apiProductSearch: apiProductSearch
     };
 
     if (productSearch.isCategorySearch && !productSearch.isRefinedCategorySearch && categoryTemplate && apiProductSearch.category.parent.ID === 'root') {
