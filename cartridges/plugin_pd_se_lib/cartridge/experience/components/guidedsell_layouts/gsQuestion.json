@@ -26,6 +26,8 @@
           "name": "Preference Name",
           "type": "enum",
           "values": [
+            "style",
+            "weather",
             "refinementColor",
             "size",
             "isNew"
