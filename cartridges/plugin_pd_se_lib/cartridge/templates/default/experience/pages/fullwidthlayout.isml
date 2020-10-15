@@ -1,15 +1,14 @@
-<iscontent type="text/html" charset="UTF-8" compact="true"/>
-<isdecorate template="${pdict.decorator}">
-	<isscript>
-	    var assets = require('*/cartridge/scripts/assets.js');
-	    assets.addCss('/css/layout.css');
-	    assets.addCss('/css/pagedesigner-bootstrap.min.css');
-	</isscript>
+<iscontent type="text/html" charset="UTF-8" compact="true" />
 
-	<!--- the page markup --->
-	<div>
-	    <div id="${pdict.page.ID}">
-			<isprint value="${pdict.regions.main.setClassName("col-12 no-padding").render()}" encoding="off"/>
-	    </div>
+<isdecorate template="common/layout/pdStorePage">
+	<isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/experience/storePage.css');
+    </isscript>
+
+	<div class="storepage" id="${pdict.page.ID}">
+		<div class="row">
+			<isprint value="${pdict.regions.main.setClassName(" col-12").render()}" encoding="off" />
+		</div>
 	</div>
 </isdecorate>
