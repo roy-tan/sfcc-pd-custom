@@ -1,0 +1,49 @@
+{
+    "name": "2 Row x 1 Col (Mobile), 1 Row x 2 Col (Desktop)",
+    "description": "Layout component of 2 row by 1 column for mobile and 1 row by 2 columns for desktop/tablet with custom styling options",
+    "group": "se_custom_layouts",
+    "attribute_definition_groups": [{
+        "id": "styling",
+        "name": "Styling",
+        "attribute_definitions": [{
+                "id": "backgroundColor",
+                "name": "Background Color",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "styling.colorPicker"
+                },
+                "required": false
+            },
+            {
+                "id": "spacing",
+                "name": "Spacing",
+                "description": "Manage row's spacing. Note: Margin/padding can only be a value between 1-5.",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "styling.spacing"
+                },
+                "required": false
+            },
+            {
+                "id": "border",
+                "name": "Border",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "styling.border"
+                },
+                "required": false
+            }
+        ]
+    }],
+    "region_definitions": [{
+            "id": "column1",
+            "name": "Column 1",
+            "component_type_exclusions": []
+        },
+        {
+            "id": "column2",
+            "name": "Column 2",
+            "component_type_exclusions": []
+        }
+    ]
+}

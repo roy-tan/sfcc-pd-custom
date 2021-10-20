@@ -1,0 +1,58 @@
+{
+    "name": "Image With Text",
+    "description": "This is a component combined image with text",
+    "group": "se_custom_assets",
+    "attribute_definition_groups": [{
+        "id": "ITCImage",
+        "attribute_definitions": [{
+                "id": "image",
+                "name": "Image",
+                "type": "image",
+                "required": true
+            },
+            {
+                "id": "alt",
+                "name": "Alt Text",
+                "description": "The image alt text shown by the component.",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "heading",
+                "name": "Text Overlay",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "assets.wysiwyg"
+                },
+                "required": false
+            },
+            {
+                "id": "headingTop",
+                "name": "Text Overlay Vertical Position",
+                "description": "Position based on CSS top (px or %)",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "headingLeft",
+                "name": "Text Overlay Horizontal Position",
+                "description": "Position based on CSS left (px or %)",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "ITCLink",
+                "name": "Image Link",
+                "type": "url",
+                "required": false
+            },
+            {
+                "id": "ITCText",
+                "name": "Text Below Image",
+                "type": "markup",
+                "required": false
+            }
+        ]
+    }],
+    "region_definitions": []
+}

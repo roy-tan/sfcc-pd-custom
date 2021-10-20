@@ -1,0 +1,50 @@
+{
+    "name": "Custom Style Layout",
+    "description": "Custom Style Layout Component",
+    "group": "se_custom_layouts",
+    "attribute_definition_groups": [{
+        "id": "styling",
+        "name": "Styling",
+        "attribute_definitions": [{
+                "id": "backgroundColor",
+                "name": "Background Color",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "styling.colorPicker"
+                },
+                "required": false
+            },
+            {
+                "id": "spacing",
+                "name": "Spacing",
+                "description": "Manage row's spacing. Note: Margin/padding can only be a value between 1-5.",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "styling.spacing"
+                },
+                "required": false
+            },
+            {
+                "id": "border",
+                "name": "Border",
+                "type": "custom",
+                "editor_definition": {
+                    "type": "styling.border"
+                },
+                "required": false
+            },
+            {
+                "id": "customCss",
+                "name": "Custom CSS",
+                "description": "Custom CSS",
+                "type": "string",
+                "required": false
+            }
+        ]
+    }],
+    "region_definitions": [{
+        "id": "layout",
+        "name": "Layout",
+        "component_type_exclusions": []
+    }]
+}

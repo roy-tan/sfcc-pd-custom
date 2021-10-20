@@ -8,7 +8,7 @@ var ImageTransformation = require('~/cartridge/experience/utilities/ImageTransfo
 /**
  * Render logic for the component.endscene.
  */
-module.exports.render = function (context) {
+module.exports.render = function(context) {
     var model = new HashMap();
     var content = context.content;
 
@@ -18,7 +18,7 @@ module.exports.render = function (context) {
     model.buttonName = content.button_name;
     model.autoplay = "";
     if (content.video_autoplay == true)
-    	model.autoplay = "autoplay";
+        model.autoplay = "autoplay";
 
     if (content.image) {
         model.image = ImageTransformation.getScaledImage(content.image);

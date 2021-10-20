@@ -1,0 +1,8 @@
+{
+    "name": "Border Widget",
+    "description": "A color picker.",
+    "resources": {
+        "scripts": ["https://kit.fontawesome.com/c860f17f26.js", "/js/experience/editors/border.js"],
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"]
+    }
+}

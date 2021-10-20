@@ -1,0 +1,7 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+</isscript>
+<isprint value="${pdict.regions.layout.setClassName("customStyle").setAttribute('style', pdict.customCss + pdict.componentStyles).render()}" encoding="off"/>
+
+

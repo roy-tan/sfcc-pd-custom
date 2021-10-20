@@ -1,0 +1,8 @@
+{
+    "name": "WYSIWYG",
+    "description": "An advanced WYSIWYG editor.",
+    "resources": {
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"],
+        "scripts": ["/js/vendor/tinymce/tinymce.min.js", "/js/experience/editors/wysiwyg.js"]
+    }
+}

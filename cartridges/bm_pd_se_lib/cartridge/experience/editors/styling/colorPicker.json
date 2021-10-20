@@ -1,0 +1,8 @@
+{
+    "name": "Color Picker",
+    "description": "A color picker.",
+    "resources": {
+        "scripts": ["/js/experience/editors/color-picker.js"],
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"]
+    }
+}

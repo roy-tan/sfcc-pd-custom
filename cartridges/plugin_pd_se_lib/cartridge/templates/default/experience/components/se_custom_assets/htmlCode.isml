@@ -1,1 +1,5 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');    
+    assets.addCss('/css/htmlCode.css');
+</isscript>
 <isprint value="${pdict.html_code}" encoding="off"/>

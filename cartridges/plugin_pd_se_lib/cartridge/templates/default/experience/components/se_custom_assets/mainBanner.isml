@@ -22,12 +22,12 @@
                     <div class="hover-image ${pdict.overlayAlign}">
                         <div class="row image-heading-text">
                             <div class="col-12 text-sm-left">
-                                <span style="color:${pdict.textColor};">
+                                <span style="text-align:center; color:${pdict.textColor};">
                                     <isprint value="${pdict.heading}" encoding="off"/>
                                 </span>
                             </div>
                         </div>
-                        <div class="custom-slide-cta">
+                        <div class="custom-slide-cta" style="text-align:center;">
                             <div class="custom-slide-cta__inner bgColor-${pdict.bannerLinkColor}" data-alt-text="${Resource.msg('pd.main.banner.buy.now','pageDesigner',null)}">
                            <span>${pdict.bannerLinkText}</span>
                             </div>

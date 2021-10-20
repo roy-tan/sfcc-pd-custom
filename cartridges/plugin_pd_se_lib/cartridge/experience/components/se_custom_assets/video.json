@@ -1,61 +1,56 @@
 {
-  "name": "Video Asset",
-  "description": "Video player given Video ID",
-  "group": "se_custom_assets",
-  "attribute_definition_groups": [
-    {
-      "id": "videoSettings",
-      "name": "Video",
-      "description": "Video Settings",
-      "attribute_definitions": [
-        {
-          "id": "video_url",
-          "name": "URL",
-          "type": "string",
-          "required": true
+    "name": "Video Asset",
+    "description": "Video player given Video ID",
+    "group": "se_custom_assets",
+    "attribute_definition_groups": [{
+            "id": "videoSettings",
+            "name": "Video",
+            "description": "Video Settings",
+            "attribute_definitions": [{
+                    "id": "video_url",
+                    "name": "URL",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "video_autoplay",
+                    "name": "Autoplay",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
         },
         {
-          "id": "video_autoplay",
-          "name": "Autoplay",
-          "type": "boolean",
-          "required": false
-        }
-      ]
-    },
-    {
-      "id": "imageOverlay",
-      "name": "Overlay Image",
-      "description": "The image on top of the video.",
-      "attribute_definitions": [
-        {
-          "id": "image",
-          "name": "Image",
-          "type": "image",
-          "required": false
-        }
-      ]
-    },
-    {
-      "id": "button_spec",
-      "name": "Button Specification",
-      "description": "Specify the link for the 'Show Now' button.",
-      "attribute_definitions": [
-        {
-          "id": "shop_now_target",
-          "name": "Link",
-          "description": "Specification for the link to where the user will be directed.",
-          "type": "url",
-          "required": true
+            "id": "imageOverlay",
+            "name": "Overlay Image",
+            "description": "The image on top of the video.",
+            "attribute_definitions": [{
+                "id": "image",
+                "name": "Image",
+                "type": "image",
+                "required": false
+            }]
         },
         {
-          "id": "button_name",
-          "name": "Button Name",
-	        "description": "The text to be displayed on Botton. If nothing is entered 'Shop Now' will be displayed.",
-          "type": "string",
-          "required": false
+            "id": "button_spec",
+            "name": "Button Specification",
+            "description": "Specify the link for the 'Show Now' button.",
+            "attribute_definitions": [{
+                    "id": "shop_now_target",
+                    "name": "Link",
+                    "description": "Specification for the link to where the user will be directed.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "button_name",
+                    "name": "Button Name",
+                    "description": "The text to be displayed on Botton. If nothing is entered 'Shop Now' will be displayed.",
+                    "type": "string",
+                    "required": false
+                }
+            ]
         }
-      ]
-    }    
-  ],
-  "region_definitions": []
+    ],
+    "region_definitions": []
 }

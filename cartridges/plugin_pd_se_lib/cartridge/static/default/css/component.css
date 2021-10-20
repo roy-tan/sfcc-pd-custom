@@ -1,14 +1,14 @@
 .component-figure {
-  margin: 0;
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .component-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: var(--focal-point-x) var(--focal-point-y);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--focal-point-x) var(--focal-point-y);
 }
 
 .no-padding {
@@ -17,90 +17,90 @@
 }
 
 .image-heading-text {
-  font-family: Arial,sans-serif;
-  color: #000
+    font-family: Arial, sans-serif;
+    color: #000
 }
 
 .mainbanner-image {
-  height: auto;
+    height: auto;
 }
 
 .custom-slide-cta {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .bgColor-green {
-  background-color:#3bd373;
+    background-color: #3bd373;
 }
 
 .bgColor-blue {
-  background-color:#07b;
+    background-color: #07b;
 }
 
 .bgColor-purple {
-  background-color:#7469ff;
+    background-color: #7469ff;
 }
 
 .bgColor-orange {
-  background-color:#ff5000;
+    background-color: #ff5000;
 }
 
 .custom-slide-cta__inner {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  font-family: Arial,sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #fff;
-  border-radius: 26px;
-  padding: 8px 40px;
-  letter-spacing: .06em;
-  -webkit-transition: all .12s ease-in-out;
-  -moz-transition: all .12s ease-in-out;
-  transition: all .12s ease-in-out;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 26px;
+    padding: 8px 40px;
+    letter-spacing: .06em;
+    -webkit-transition: all .12s ease-in-out;
+    -moz-transition: all .12s ease-in-out;
+    transition: all .12s ease-in-out;
 }
 
 .custom-slide-inner {
-  opacity: 1;
-  transform: translateX(0);
-  margin-right: 60px;
-  display: inline;
+    opacity: 1;
+    transform: translateX(0);
+    margin-right: 60px;
+    display: inline;
 }
 
 .hover-image {
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 25%;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
 }
 
-.hover-image.left { 
-  left : 3%
+.hover-image.left {
+    left: 15%
 }
 
-.hover-image.middle { 
-  left : 32%
+.hover-image.middle {
+    left: 32%
 }
 
-.hover-image.right { 
-  left : 62%
+.hover-image.right {
+    left: 62%
 }
 
 .legal {
-  font-size: 11px;
-  position: relative;
-  text-align: center;
-  left: 0;
-  bottom: 10px;
+    font-size: 11px;
+    position: relative;
+    text-align: center;
+    left: 0;
+    bottom: 10px;
 }
 
 .box {
-	font-family: GantModernBold,sans-serif;
-	max-width: 160px;
-  padding: 11px 8px;
-  font-size: .694rem;
-	color: #fff;
-	border-color: #fff;
-	border: 1px solid #fff;
+    font-family: GantModernBold, sans-serif;
+    max-width: 160px;
+    padding: 11px 8px;
+    font-size: .694rem;
+    color: #fff;
+    border-color: #fff;
+    border: 1px solid #fff;
 }

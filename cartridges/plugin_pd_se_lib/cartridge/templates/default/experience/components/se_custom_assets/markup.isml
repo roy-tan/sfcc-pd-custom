@@ -1,0 +1,9 @@
+<div class="${pdict.componentClasses}" style="${pdict.componentStyles}">
+    <isif condition="${pdict.link}">
+        <a class="text-reset" href="${pdict.link}">
+    </isif>
+    <isprint value="${pdict.content}" encoding="off" />
+    <isif condition="${pdict.link}">
+        </a>
+    </isif>
+</div>

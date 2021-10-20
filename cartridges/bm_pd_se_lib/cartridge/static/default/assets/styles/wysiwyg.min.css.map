@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./cartridges/bm_ditto/cartridge/client/default/scss/experience/editors/wysiwyg.scss"],"names":[],"mappings":"AAAA,WACE,gBAAiB","file":"wysiwyg.min.css","sourcesContent":[".ql-editor {\n  min-height: 250px;\n}"],"sourceRoot":""}
