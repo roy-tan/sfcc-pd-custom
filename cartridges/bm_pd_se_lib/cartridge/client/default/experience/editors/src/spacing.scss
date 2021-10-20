@@ -1,0 +1,92 @@
+.spacing-widget {
+  background: #eee;
+  font-size: 0.75rem;
+  height: 150px;
+  position: relative;
+  width: 250px;
+}
+
+.spacing-input {
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  width: 25px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.spacing-widget_margin {
+  background-color: #4bca81;
+  height: 100%;
+  width: 100%;
+}
+
+.spacing-widget_padding {
+  background-color: #d8edff;
+  bottom: 25px;
+  left: 25px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.spacing-widget_content {
+  align-items: center;
+  background-color: #fff;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  left: 50px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+.spacing-widget_margin,
+.spacing-widget_padding {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spacing-widget_top {
+  .spacing-input {
+    margin-top: 5px;
+  }
+}
+
+.spacing-widget_bottom {
+  .spacing-input {
+    margin-bottom: 5px;
+  }
+}
+
+.spacing-widget_middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .spacing-input:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .spacing-input:nth-child(2) {
+    margin-right: -2px;
+  }
+}
+
+.spacing-widget_top,
+.spacing-widget_bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section-label {
+  font-size: 0.6rem;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+}

@@ -7,10 +7,11 @@ var PageRenderHelper = require('~/cartridge/experience/utilities/PageRenderHelpe
 /**
  * Render logic for the layouts.1columnFullWidth.
  */
-module.exports.render = function (context) {
+module.exports.render = function(context) {
     var model = new HashMap();
     var component = context.component;
-
+    model.componentClasses = PageRenderHelper.getComponentClasses(context.content);
+    model.componentStyles = PageRenderHelper.getComponentStyles(context.content);
     // automatically register configured regions
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 

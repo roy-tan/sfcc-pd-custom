@@ -1,0 +1,25 @@
+.quill {
+    height: 400px;
+}
+
+.code-textarea {
+    background: rgb(29, 29, 29);
+    border: none;
+    bottom: 0;
+    box-sizing: border-box;
+    color: rgb(204, 204, 204);
+    display: none;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0px;
+    outline: none;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.ql-showHtml:after {
+    content: "[source]";
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Spacing Widget",
+    "description": "Renders a spacing widget allowing users to edit the margin and padding.",
+    "resources": {
+        "scripts": ["/js/experience/editors/spacing.js"],
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"]
+    }
+}

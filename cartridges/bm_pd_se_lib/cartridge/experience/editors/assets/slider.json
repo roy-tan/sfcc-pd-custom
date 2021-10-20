@@ -1,0 +1,8 @@
+{
+    "name": "Slider",
+    "description": "A slider editor.",
+    "resources": {
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"],
+        "scripts": ["/js/experience/editors/slider.js"]
+    }
+}

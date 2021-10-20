@@ -9,17 +9,18 @@
 	</video>
 	
 	<div class="hover-image">
-		<isif condition="${pdict.image.src}"><img src="${pdict.image.src.desktop}"></isif>
+		<isif condition="${pdict.image.src}"><img src="${pdict.image.src.desktop}"></isif>		
+		<isif condition="${pdict.buttonName != 'undefined'}">
 	 	<p class="pstyle">
-			<section>
-						<a href="${pdict.targetUrl}" style="text-decoration:none;">
-							<button id="js-trigger-overlay" type="button">
-								<isprint value="${pdict.buttonName}" encoding="off"/>
-							</button>
-						</a>
-					</section>			
-		</p>
-	 	
+			<section>			
+			<a href="${pdict.targetUrl}" style="text-decoration:none;">
+				<button id="js-trigger-overlay" type="button">
+					<isprint value="${pdict.buttonName}" encoding="off"/>
+				</button>
+			</a>
+			</section>			
+		</p>	 
+		</isif>	
 	</div>
 </div>
 

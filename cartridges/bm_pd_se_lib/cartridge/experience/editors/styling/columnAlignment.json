@@ -1,0 +1,8 @@
+{
+    "name": "Column Alignment",
+    "description": "Column alignment management at different breakpoints.",
+    "resources": {
+        "scripts": ["/js/experience/editors/column-alignment.js"],
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"]
+    }
+}

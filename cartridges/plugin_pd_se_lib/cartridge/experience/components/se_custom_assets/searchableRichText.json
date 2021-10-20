@@ -1,0 +1,23 @@
+{
+    "name": "Searchable Textbox",
+    "description": "Searchable Textbox Component",
+    "group": "se_custom_assets",
+    "attribute_definition_groups": [{
+        "id": "textContent",
+        "name": "Text Content",
+        "description": "The content to show in this component",
+        "attribute_definitions": [{
+            "id": "richText",
+            "name": "content",
+            "description": "This is the rich text content area",
+            "type": "markup",
+            "required": true,
+            "searching": {
+                "searchable": true,
+                "refinable": true,
+                "boost_factor": 2.0
+            }
+        }]
+    }],
+    "region_definitions": []
+}

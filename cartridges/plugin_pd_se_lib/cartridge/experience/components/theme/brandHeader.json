@@ -1,0 +1,52 @@
+{
+    "name": "Brand Header (Main Theme)",
+    "description": "A single line brand header. Mobile menu appears on bottom left",
+    "group": "theming",
+    "attribute_definition_groups": [{
+        "id": "layout",
+        "name": "Layout controls",
+        "description": "Layout controls to be used",
+        "attribute_definitions": [{
+            "id": "headerPosition",
+            "name": "Header Position",
+            "description": "Header position to be used",
+            "type": "enum",
+            "values": [
+                "static",
+                "relative",
+                "fixed",
+                "absolute",
+                "sticky"
+            ],
+            "default_value": "fixed",
+            "required": true
+        }]
+    }],
+    "region_definitions": [{
+            "id": "left",
+            "name": "Left",
+            "component_type_exclusions": []
+        },
+        {
+            "id": "middle",
+            "name": "Middle",
+            "component_type_exclusions": []
+        },
+        {
+            "id": "right",
+            "name": "Right",
+            "component_type_exclusions": []
+        },
+        {
+            "id": "menu",
+            "name": "Menu",
+            "max_components": 1,
+            "component_type_exclusions": []
+        },
+        {
+            "id": "announcement",
+            "name": "Announcement",
+            "component_type_exclusions": []
+        }
+    ]
+}

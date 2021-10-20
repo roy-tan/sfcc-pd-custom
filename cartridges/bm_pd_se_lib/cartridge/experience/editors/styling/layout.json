@@ -1,0 +1,8 @@
+{
+    "name": "Layout",
+    "description": "Layout width management at different breakpoints.",
+    "resources": {
+        "scripts": ["/js/experience/editors/layout.js"],
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"]
+    }
+}

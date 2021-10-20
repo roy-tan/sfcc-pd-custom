@@ -1,0 +1,8 @@
+{
+    "name": "HTML",
+    "description": "An HTML editor.",
+    "resources": {
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"],
+        "scripts": ["/js/experience/editors/html.js"]
+    }
+}

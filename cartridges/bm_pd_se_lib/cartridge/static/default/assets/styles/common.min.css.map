@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./cartridges/bm_ditto/cartridge/client/default/scss/experience/editors/common.scss"],"names":[],"mappings":"AAAA,UAEE,4BAA6B,CAC9B,QAGC,uBAAwB","file":"common.min.css","sourcesContent":["html,\nbody {\n  background-color: transparent;\n}\n\n*:focus {\n  outline: none !important;\n}\n"],"sourceRoot":""}

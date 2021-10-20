@@ -1,0 +1,34 @@
+<style>
+    header {
+        position: ${pdict.headerPosition};
+        top: 0;
+        width: 100%;
+        z-index: 9001;
+    }
+
+    .underheader {
+        height: ${pdict.underHeaderHeight};
+    }
+</style>
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/singleLineHeader.css');
+    assets.addJs('/js/singleLineHeader.js');
+
+</isscript>
+
+<header class="banner-color">    
+        <isinclude template="/components/header/skipNav" />
+        <nav class="singlelineheader">
+            <span class="one"><isprint value="${pdict.regions.left.setClassName('d-flex h-100').setTagName('sfcc-nodefaultstyle', true).render()}" encoding="off"/></span>
+            <span class="two"><isprint value="${pdict.regions.middle.setTagName('sfcc-nodefaultstyle', true).setComponentClassName('middle').render()}" encoding="off"/></span>
+            <span class="three"><isprint value="${pdict.regions.right.setClassName('d-flex h-100').setTagName('sfcc-nodefaultstyle', true).setComponentClassName('right-item').render()}" encoding="off"/></span>
+        </nav>    
+</header>
+<isprint value="${pdict.regions.menu.setTagName('sfcc-nodefaultstyle', true).render()}" encoding="off"/>
+<button class="navbar-toggler d-md-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+&#9776; <span>Menu</span>
+</button>
+<div class="underheader" style="">&nbsp;</div>
+<isprint value="${pdict.regions.announcement.setTagName('sfcc-nodefaultstyle', true).setClassName('container announcement').render()}" encoding="off"/>

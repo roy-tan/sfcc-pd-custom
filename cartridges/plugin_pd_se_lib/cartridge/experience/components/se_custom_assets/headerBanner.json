@@ -1,0 +1,24 @@
+{
+    "name": "Header Banner",
+    "description": "Header Banner",
+    "group": "se_custom_assets",
+    "attribute_definition_groups": [{
+        "id": "content",
+        "name": "Content",
+        "attribute_definitions": [{
+                "id": "image",
+                "name": "Banner Image",
+                "description": "",
+                "type": "image",
+                "required": false
+            },
+            {
+                "id": "heading",
+                "name": "Banner Text",
+                "type": "markup",
+                "required": false
+            }
+        ]
+    }],
+    "region_definitions": []
+}

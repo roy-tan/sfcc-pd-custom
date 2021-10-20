@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///../sfcc-pd-custom/cartridges/bm_pd_se_lib/cartridge/client/default/scss/experience/editors/wysiwyg.scss"],"names":[],"mappings":"AAAA;EACE,kBAAkB,EAAE","file":"default/css/experience/editors/wysiwyg.css","sourcesContent":[".ql-editor {\n  min-height: 250px; }\n"],"sourceRoot":""}

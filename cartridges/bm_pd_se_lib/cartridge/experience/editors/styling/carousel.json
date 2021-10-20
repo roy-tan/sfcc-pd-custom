@@ -1,0 +1,8 @@
+{
+    "name": "Carouse",
+    "description": "Carousel management at different breakpoints.",
+    "resources": {
+        "scripts": ["/js/experience/editors/carousel.js"],
+        "styles": ["/assets/styles/salesforce-lightning-design-system.min.css", "/assets/styles/common.min.css"]
+    }
+}
