@@ -7,8 +7,9 @@
 <div class="mainbanner-container">
     <a href="${pdict.bannerLink}">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12">            
                 <figure class="mainbanner-figure image-component">
+                    <isif condition="${pdict.image}"> 
                     <picture>
                         <source srcset="${pdict.image.src.tablet}" media="(min-width: 768px)"/>
                         <source srcset="${pdict.image.src.desktop}" media="(min-width: 1024px)"/>
@@ -19,6 +20,7 @@
                             <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif>
                         />
                     </picture>
+                    </isif>
                     <div class="hover-image ${pdict.overlayAlign}">
                         <div class="row image-heading-text">
                             <div class="col-12 text-sm-left">
@@ -36,7 +38,7 @@
                             <div class="legal"><span style="color:${pdict.textColor};">${pdict.terms}</span></div>
                         </isif>                                                              
                     </div>
-                </figure>
+                </figure>            
             </div>
         </div>
     </a>

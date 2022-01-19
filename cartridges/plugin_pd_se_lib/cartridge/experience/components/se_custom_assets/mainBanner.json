@@ -1,86 +1,80 @@
 {
-  "name": "Main Banner - Adjustable Overlay Text",
-  "description": "Image, text overlay that links user to a category using the markup editor",
-  "group": "se_custom_assets",
-  "attribute_definition_groups": [
-    {
-      "id": "bannerImage",
-      "name": "Banner Image",
-      "description": "The visual display of the banner image in the background.",
-      "attribute_definitions": [
-        {
-          "id": "image",
-          "name": "Image",
-          "type": "image",
-          "required": true
-        }
-      ]
-    },
-    {
-      "id": "textOverlay",
-      "name": "Text Overlay",
-      "description": "The overlay text on top of the banner image.",
-      "attribute_definitions": [
-        {
-          "id": "overlayAlign",
-          "name": "Overlay Alignment",
-          "description": "Alignment of overlay content",
-          "type": "enum",
-          "values": ["left","middle","right"],
-          "default_value": "right",
-          "required": true
+    "name": "Main Banner - Adjustable Overlay Text",
+    "description": "Image, text overlay that links user to a category using the markup editor",
+    "group": "se_custom_assets",
+    "attribute_definition_groups": [{
+            "id": "bannerImage",
+            "name": "Banner Image",
+            "description": "The visual display of the banner image in the background.",
+            "attribute_definitions": [{
+                "id": "image",
+                "name": "Image",
+                "type": "image",
+                "required": false
+            }]
         },
         {
-          "id": "textColor",
-          "name": "Text Color",
-          "description": "Color of overlay text content",
-          "type": "enum",
-          "values": ["black","white"],
-          "default_value": "black",
-          "required": true
-        },                 
-        {
-          "id": "heading",
-          "name": "Heading",
-          "type": "markup",
-          "required": true
-        }
-        ,        
-        {
-          "id": "terms",
-          "name": "Terms & Conditions",
-          "type": "text",
-          "required": false
-        }        
-      ]
-    },
-    {
-      "id": "bannerLink",
-      "name": "Banner Link Parameters",
-      "description": "Link on the banner image",
-      "attribute_definitions": [
-        {
-          "id": "bannerLink",
-          "name": "Link",
-          "type": "url",
-          "required": true
+            "id": "textOverlay",
+            "name": "Text Overlay",
+            "description": "The overlay text on top of the banner image.",
+            "attribute_definitions": [{
+                    "id": "overlayAlign",
+                    "name": "Overlay Alignment",
+                    "description": "Alignment of overlay content",
+                    "type": "enum",
+                    "values": ["left", "middle", "right"],
+                    "default_value": "right",
+                    "required": true
+                },
+                {
+                    "id": "textColor",
+                    "name": "Text Color",
+                    "description": "Color of overlay text content",
+                    "type": "enum",
+                    "values": ["black", "white"],
+                    "default_value": "black",
+                    "required": true
+                },
+                {
+                    "id": "heading",
+                    "name": "Heading",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "terms",
+                    "name": "Terms & Conditions",
+                    "type": "text",
+                    "required": false
+                }
+            ]
         },
         {
-          "id": "bannerLinkText",
-          "name": "Button Text",
-          "type": "string",
-          "required": true
-        },
-        {
-          "id": "bannerLinkColor",
-          "name": "Button Color",
-          "type": "enum",
-          "values": ["orange","green","blue","purple"],
-          "default_value": "orange",
-          "required": true
+            "id": "bannerLink",
+            "name": "Banner Link Parameters",
+            "description": "Link on the banner image",
+            "attribute_definitions": [{
+                    "id": "bannerLink",
+                    "name": "Link",
+                    "type": "url",
+                    "required": true
+                },
+                {
+                    "id": "bannerLinkText",
+                    "name": "Button Text",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "bannerLinkColor",
+                    "name": "Button Color",
+                    "type": "enum",
+                    "values": ["orange", "green", "blue", "purple"],
+                    "default_value": "orange",
+                    "required": true
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "region_definitions": []
+    ],
+    "region_definitions": []
 }

@@ -10,14 +10,14 @@ var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransfo
  * @param {dw.experience.ComponentScriptContext} context The Component script context object.
  * @returns {string} The template to be displayed
  */
-module.exports.render = function (context) {
+module.exports.render = function(context) {
     var model = new HashMap();
     var content = context.content;
     model.overlayAlign = content.overlayAlign;
     model.textColor = content.textColor;
     model.heading = content.heading;
     model.terms = content.terms ? content.terms : null;
-    model.image = ImageTransformation.getScaledImage(content.image);
+    model.image = content.image ? ImageTransformation.getScaledImage(content.image) : null;
     model.bannerLink = content.bannerLink ? content.bannerLink : '#';
     model.bannerLinkText = content.bannerLinkText ? content.bannerLinkText : null;
     model.bannerLinkColor = content.bannerLinkColor;
